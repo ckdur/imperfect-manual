@@ -38,9 +38,6 @@ docs/_build/
 *.doctree
 *.pickle
 
-# ReadTheDocs build artifacts
-.readthedocs.yml
-
 # pyenv
 .python-version
 
