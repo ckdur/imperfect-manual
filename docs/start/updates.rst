@@ -92,7 +92,7 @@ The updates are organized in the following way:
 
   - Introduction of all-in-one simulator (PMOD)
 
-- **1.2.0 - 1.2.1** - `update.9dc4253d.upd` (Wed Jul 3 20:16:45 2025 +0900)
+- **1.2.0 - 1.2.1** - `update.9dc4253d.upd` (Thu Jul 3 20:09:33 2025 +0900)
 
   - Putting the Phoenix personal server
   - Putting the Phoenix update definition file
