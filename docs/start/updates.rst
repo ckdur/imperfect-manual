@@ -95,4 +95,5 @@ The updates are organized in the following way:
 - **1.2.0 - 1.2.1** - `update.9dc4253d.upd` (Wed Jul 3 20:16:45 2025 +0900)
 
   - Putting the Phoenix personal server
+  - Putting the Phoenix update definition file
   - Fixes to prex1 and prex2 regarding display issues
