@@ -54,12 +54,20 @@ To license your Imperfect Collection installation, follow these steps.
 
 3. **Submitting Your Request**
 
-   - Send the generated `request.txt` file to the licensing contact
-     (currently NTDEC, or via a future licensing web page).
+   - Send the generated `request.txt` file to NTDEC if you are supporting.
+     (site: `ckdur Patreon <https://patreon.com/ckdur>`_)
+   - For free users, please go directly to `http://ntdec.net:8080/ <http://ntdec.net:8080/>`_ .
+     Put the serial (From the screen or the `request.txt`) and a name of maximum
+     20 characters. If you put more than 20 characters, will be truncated.
+  
+  .. warning::
+    The information will be registered. If concerned about your privacy, please
+    note that we use this information as statistics.
 
 4. **Receiving Your License File**
 
-   After processing your request, you will receive a file named **`license.txt`**.
+   After processing your request, you will receive a file. Rename the file to 
+   **`license.txt`**.
 
 5. **Installing the License**
 
