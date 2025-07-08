@@ -21,7 +21,7 @@ Typical Procedure
 
 To use the Importer, follow these steps:
 
-1. **Open the settings menu.** More info can be found in :ref:`importer_section`
+1. **Open the settings menu.** More info can be found in :ref:`settings_section`
 section.
 
 2. **Select the option:** Go down to the **"The Game Transfer Feature!! 

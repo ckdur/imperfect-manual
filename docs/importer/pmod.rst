@@ -13,8 +13,9 @@ PMOD Functionality
 ^^^^^^^^^^^^^^^^^^
 
 - **Automatically detects imported games:**
-  - All songs from supported imported games are **automatically added** to the
-    PMOD song wheel upon boot.
+
+  All songs from supported imported games are **automatically added** to the 
+  PMOD song wheel upon boot.
 
 .. note::
     Songs from the following games **cannot be detected by PMOD** due to
@@ -34,28 +35,28 @@ Besides importing assets from other games, PMOD supports the addition of
 
 1. **USB Drive:**
    - Format: **FAT32**
-   - Folder structure:
-     - Place all songs inside a folder named **`Songs`** in the root of the USB.
+   - Folder structure: Place all songs inside a folder named **`Songs`** in the root of the USB.
 
 2. **Song Folder Structure:**
 
    The structure should follow standard **StepMania / PumpSanity / StepP1**
    conventions, as shown:
 
-   .. code::
-        /Songs/
-        ├── Group Name 1/
-        │ ├── Song A Folder/
-        │ │ ├── SongA.sm
-        │ │ ├── SongA.ogg
-        │ │ └── additional files...
-        │ └── Song B Folder/
-        │ ├── SongB.sm
-        │ └── SongB.ogg
-        └── Group Name 2/
-        └── Song C Folder/
-        ├── SongC.sm
-        └── SongC.mp3
+   .. code-block:: text
+
+      /Songs/
+      ├── Group Name 1/
+      │ ├── Song A Folder/
+      │ │ ├── SongA.sm
+      │ │ ├── SongA.ogg
+      │ │ └── additional files...
+      │ └── Song B Folder/
+      │ ├── SongB.sm
+      │ └── SongB.ogg
+      └── Group Name 2/
+      └── Song C Folder/
+      ├── SongC.sm
+      └── SongC.mp3
 
 - **Group folders** organize songs by category or theme.
 - Each **individual song folder** must contain:
@@ -112,6 +113,7 @@ Additional Notes
 ^^^^^^^^^^^^^^^^
 
 - **Free license limitations:**  
+
 Importing external songs doesn't require any license. But, still would be nice
 if you support us. Please visit the patreon for more information
 

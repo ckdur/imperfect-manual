@@ -51,20 +51,21 @@ Legal Disclaimer
 Before initiating the backup process, users are presented with a **mandatory 
 legal disclaimer**:
 
-.. code::
-    ************ PLEASE READ *************
+.. code-block:: text
 
-    This is a warning message
+   ************ PLEASE READ *************
 
-    This backup uses APIs from Senselock.
-    It is known that the dongle COULD BE
-    BRICKED, rendering the game useless.
-    The creators of this importer DO NOT TAKE
-    RESPONSABILITY for a possible bricking
-    of your original game. Please proceed
-    with caution
+   This is a warning message
 
-    ************ PLEASE READ *************
+   This backup uses APIs from Senselock.
+   It is known that the dongle COULD BE
+   BRICKED, rendering the game useless.
+   The creators of this importer DO NOT TAKE
+   RESPONSABILITY for a possible bricking
+   of your original game. Please proceed
+   with caution
+
+   ************ PLEASE READ *************
 
 - Pressing the **red buttons** will indicate **disagreement**, stopping the
   backup process immediately.
