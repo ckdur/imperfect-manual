@@ -73,6 +73,7 @@ of use:
 2. **Main List:** Full list of supported games with versions and dates.
 3. **Footer:** System hardware status and current date/time for reference.
 
+.. _settings_section:
 Settings menu
 ^^^^^^^^^^^^^
 
