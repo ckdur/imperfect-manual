@@ -22,4 +22,5 @@ installation experience.
    boot
    menu
    licensing
+   compat
    updates
