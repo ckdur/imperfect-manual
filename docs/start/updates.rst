@@ -44,6 +44,19 @@ Updating Procedure
 After updating, your loader will reboot if necessary and incorporate the new 
 system changes automatically.
 
+.. note::
+
+   Starting with version **2.0.0**:
+
+   - Update packages are **signed**. A package that was not signed with the
+     project's update key is refused, and so is a package whose PMOD content is
+     incomplete.
+   - The operating system images are not overwritten while they are in use.
+     The update stages them next to the old ones (as `<name>.ntdec.new`) and the
+     loader swaps them into place **on the next boot**, so the machine may
+     reboot once more after the update finishes. Do not turn it off while this
+     happens.
+
 
 Updates reference
 ^^^^^^^^^^^^^^^^^
@@ -97,3 +110,47 @@ The updates are organized in the following way:
   - Putting the Phoenix personal server
   - Putting the Phoenix update definition file
   - Fixes to prex1 and prex2 regarding display issues
+
+- **1.2.1 - 1.3.1** - *file name and date are published with the release in the
+  Updates folder.* Summarized from the project history; these changes landed
+  between July 2025 and the 1.3.1 build:
+
+  - Support for the newer Phoenix releases.
+  - Fixes to the update system (including a USB library fix), and the front
+    buttons (USB) are enabled for navigation.
+  - 1st and 2nd Dance Floor now use de-compiled versions, and the Rebirth
+    problem is fixed.
+  - Quieter boot: the first-boot resizing no longer prints its tool output, and
+    the FAT resizing is friendlier to big hard disks.
+  - **PMOD** standalone release (an image that only contains the simulator),
+    with an ext2 variant, and the importer can copy the latest PMOD release.
+    PMOD itself moved to **PMOD6**.
+  - Executables are now checked against a signature before they are loaded.
+
+- **1.3.1 - 2.0.0** - *file name and date are published with the release in
+  the Updates folder.* A new base system; the changes are:
+
+  - **New base OS ("NTDECOS")**: own kernel, initramfs and userland, built
+    entirely from source (no original Andamiro payloads are needed to build the
+    loader). Graphics are supplied by per-GPU *driver images*, with
+    NVIDIA 340.108 / 390.157 ports, a virtio-gpu driver for virtual machines,
+    and 720p output taken from the driver. Screen detection now handles
+    cloned outputs (XRandR).
+  - **Signed boot chain**: grub only boots a signed kernel, and the loader only
+    runs signed menu / importer / PMOD files and dm-verity protected OS
+    images. See :ref:`security_section`.
+  - **Licensing hardening**, with automatic migration of older licenses. See
+    :ref:`license_migration_section`.
+  - **Menu**: animated, with an *About* screen. Holding TEST no longer breaks
+    the menu, the *boot last game* option no longer relaunches a game you just
+    quit, and the *Power off* entry works again.
+  - **Games**: Phoenix 2.12 boots (and the importer recognizes Phoenix 2.13).
+    Prime 2, XX, Prime and Prime Japanese Edition start and stay up. An
+    AM.PASS reader emulator and a local game server are included for these
+    titles. See :ref:`the games section <games_compat_section>`.
+  - Fixes for a heap corruption in the menu (`game.ini` handling) and in the
+    sound thread.
+  - **PMOD6 images** in vfat, ext2 and NTFS flavors, and ffmpeg 8.0 for PMOD
+    (the games keep ffmpeg 4.4.4).
+  - The loader image can be built as a qcow2 and run in a virtual machine. See
+    :doc:`../dev/building`.

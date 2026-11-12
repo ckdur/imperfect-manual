@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Imperfect Collection & Other'
-copyright = '2025, ckdur, tulim0n, h4m573r'
+copyright = '2025-2026, ckdur, tulim0n, h4m573r'
 author = 'ckdur, tulim0n, h4m573r'
-release = '0.1'
+release = '2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,7 +24,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
-html_static_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_static_path = []
 

@@ -34,6 +34,7 @@ tools:
 
 1. Insert the target hard disk and identify its device path (for example, 
    `/dev/sdX`). You can check this using the `lsblk` or `fdisk -l` commands.
+
 2. Run the following command, replacing `/dev/sdX` with your target disk:
 
    .. code-block:: bash
@@ -51,6 +52,7 @@ disk. Two recommended options are:
 
 - **balenaEtcher** (https://etcher.io): A simple graphical tool that supports 
   compressed images directly.
+
 - **Rufus** (https://rufus.ie): If using Rufus, you need to first extract 
   `imperfect_collection_vX.X.X_RELEASE.img.gz` using a program like 7-Zip to
   obtain the raw `.img` file.

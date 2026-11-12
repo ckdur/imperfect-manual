@@ -23,8 +23,10 @@ Filesystem Details
 - **Prime 2** uses **EncryptFS** encryption.
 - **XX** and **Phoenix** use **LUKSv1 encryption**.
 - Games now store data using a modified version of **AMF**:
+
   - Files have a `.bin` extension.
   - Two separate strings of updates exist:
+
     - Theorized purpose: to control asset replacement granularity across updates
       efficiently.
 
@@ -32,6 +34,7 @@ Executable Storage
 ^^^^^^^^^^^^^^^^^^
 
 - Unlike previous generations:
+
   - The **executable is not stored in raw disk space**.
   - It is located **inside the encrypted filesystem**.
   - Additionally, it is **encrypted with a dongle-derived key**.
@@ -40,8 +43,10 @@ Security Details
 ^^^^^^^^^^^^^^^^
 
 - Uses **Senselock dongle protection**:
+
   - Supports **internal execution within the USB device**.
   - ⚠ **Critical warning:**  
+
     - If **incorrect license requests** are made, the dongle can **self-destruct
       (brick itself)**, permanently rendering the game unusable.
 
@@ -69,6 +74,7 @@ legal disclaimer**:
 
 - Pressing the **red buttons** will indicate **disagreement**, stopping the
   backup process immediately.
+
 - Users must explicitly press center to **agree to proceed**, acknowledging
   that the liability relies on the user.
 
@@ -93,8 +99,10 @@ Follow these steps to perform an import using the Senselock-based Importer:
 3. **Insert the game disk.**
 
    - Connect the HDD containing the game using either:
+
      - A **USB-to-SATA converter**
      - A **direct SATA connection**
+
    - The disk can be inserted **before or after launching** the importer; the
      system will detect it automatically.
 
@@ -107,14 +115,17 @@ Follow these steps to perform an import using the Senselock-based Importer:
         **Etching a disk image:**
 
         - If you have a game `.img` or compressed `.img.gz` file:
+
             - Use tools like **Balena Etcher** or **Rufus** to write the image 
               to your HDD or USB drive.
+
             - Ensure the writing process completes without errors to avoid read
               issues during import.
 
 4. **Insert the Senselock dongle.**
 
    - Required for:
+
      - **License verification**
      - **Decryption of the executable**
 
@@ -127,20 +138,25 @@ Follow these steps to perform an import using the Senselock-based Importer:
    The importer will execute the following tasks sequentially:
 
    - **Mount the encrypted filesystem.**
+
      - Prime 2: **ext2** + **EncryptFS**
      - XX and Phoenix: **LUKSv1** + **ext2/ext4**
 
    - **Retrieve and decrypt the executable.**
+
      - Located within the encrypted filesystem.
      - Decrypted using a **key derived from the Senselock dongle**.
 
    - **Extract game files and updates:**
+
      - Main game files are in `.bin` format within the AMF variant.
      - Updates are organized into **two separate update strings** for asset
        replacement control.
+
      - All data is copied to secure storage for integration.
 
    - **Extract license keys:**
+
      - Keys are retrieved using APIs interfacing directly with the Senselock
        dongle.
 
@@ -148,6 +164,7 @@ Follow these steps to perform an import using the Senselock-based Importer:
 
    - Upon successful completion, the system will **automatically reboot** to
      integrate the new game.
+
    - The newly imported game should appear in the game menu after reboot.
 
 Additional Notes
@@ -155,6 +172,7 @@ Additional Notes
 
 - Ensure your game disk is updated to the **latest available version** prior to
   import to maximize compatibility and minimize risk.
+
 - Always **use a stable USB port** and avoid disconnecting devices during the
   import process to prevent bricking.
 
@@ -162,28 +180,41 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 
 - **Game not detected:**
+
   - Verify the HDD or USB drive is properly etched and connected.
   - Confirm updates are applied to the game before import.
 
 - **Dongle not detected or bricked:**
+
   - Ensure the Senselock dongle is inserted securely.
   - Try a different USB port if detection fails.
   - If bricked, the dongle is permanently unusable and requires manufacturer
     replacement.
 
 - **Executable decryption failure:**
+
   - Ensure the correct dongle is inserted for the intended game.
   - Retry the import to rule out transient read errors.
 
 - **Import fails midway:**
+
   - Re-etch the disk image to eliminate corruption.
   - Check logs for filesystem mount or permission errors.
 
 - **Game not appearing after reboot:**
+
   - Retry the import process from the beginning.
   - Confirm that all extracted files were copied without errors.
 
 - **Check for your dongle:**
+
   - Check if your original game is running after the backup process.
   - If working, means the dongle still works.
 
+Phoenix versions
+^^^^^^^^^^^^^^^^
+
+The importer recognizes **Phoenix 2.13** as well as the earlier releases. If the
+version cannot be identified from the usual place, the importer falls back to
+searching the executable for the version string, so a slightly different
+release layout no longer stops the import.

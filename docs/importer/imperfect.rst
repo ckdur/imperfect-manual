@@ -29,7 +29,9 @@ The Other Games Importer enables:
 
 - **Direct transfer of games** from one Imperfect Collection installation to
   another.
+
 - **Two operational modes:**
+
   - Copy **only the currently selected game**.
   - Copy **all available games** from the source system.
 
@@ -60,15 +62,18 @@ Usage Instructions
    - If another Imperfect Collection is detected, you will be asked:
 
      - **“Copy only this game?”** (Red buttons)
+
        - Select to transfer **only the selected game**.
 
      - **“Copy all games?”** (Center button)
+
        - Select to transfer **all available games** from the connected source.
 
 6. **Begin the transfer process.**
 
    - The importer will copy the selected game(s) from the connected Imperfect
      Collection to your system.
+
    - Progress will be displayed on screen.
 
 7. **Wait for completion and reboot.**
@@ -80,16 +85,20 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 
 - **No source system detected:**
+
   - Ensure the Imperfect Collection system is connected properly. Connect it
     **after** the destinated Imperfect Collection already booted.
+
   - Verify cable integrity and connection interface compatibility.
 
 - **Feature unavailable:**
+
   - Confirm you are using a **full license**.
   - Visit **[https://www.patreon.com/ckdur](https://www.patreon.com/ckdur)** to
     upgrade if needed.
 
 - **Transfer fails midway:**
+
   - Reconnect both systems and retry the transfer.
   - Check storage space availability on the target system.
 
@@ -98,5 +107,6 @@ Additional Notes
 
 - This feature significantly reduces deployment times when **multiple systems
   require identical game sets**.
+
 - Always ensure the **source system has verified working games** before
   initiating the transfer to avoid propagating corrupted data.

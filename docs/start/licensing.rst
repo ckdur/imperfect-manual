@@ -15,6 +15,7 @@ ensure:
 - Each copy of Imperfect Collection remains **unique and traceable**.
 - **Game transference** between separate copies is prevented, avoiding
   unauthorized distribution of game files.
+
 - The loader continues serving its archival purpose **without enabling piracy**.
 
 This approach respects the intellectual property of the original games while
@@ -31,6 +32,7 @@ To license your Imperfect Collection installation, follow these steps.
 
    - A **Name**: up to **20 characters long** (letters, numbers, or simple symbols). 
      This will be shown as the license holder’s name.
+
    - The **Hard Disk Serial Number**, which is:
 
      - Displayed in the loader’s main menu footer.  
@@ -56,6 +58,7 @@ To license your Imperfect Collection installation, follow these steps.
 
    - Send the generated `request.txt` file to NTDEC if you are supporting.
      (site: `ckdur Patreon <https://patreon.com/ckdur>`_)
+
    - For free users, please go directly to `http://ntdec.net:8080/ <http://ntdec.net:8080/>`_ .
      Put the serial (From the screen or the `request.txt`) and a name of maximum
      20 characters. If you put more than 20 characters, will be truncated.
@@ -100,6 +103,23 @@ Re-Licensing Warning
 There are special licenses that allow the migration of data totally safe between
 hard disks, but those are locked behind **donation percs**. If you choose to
 support us, this feature will be available.
+
+.. _license_migration_section:
+
+License migration (2.0.0 and later)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Version 2.0.0 hardened the licensing system: licenser keys are pinned, update
+packages are signed, and a license is bound to a **machine fingerprint** rather
+than only to the hard disk serial number.
+
+- Licenses issued by older versions (bound to the disk serial) are still
+  **read and trusted**, and are **migrated on the machine** to the new binding.
+  You do not need to request a new license when upgrading.
+- Licenses from every historical licenser key generation remain valid.
+- Disks with a short serial number are now licensed correctly.
+- When a game supports it, the AM.PASS reader configuration is generated from
+  the license.
 
 ^^^^^
 

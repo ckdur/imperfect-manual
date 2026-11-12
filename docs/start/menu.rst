@@ -73,7 +73,19 @@ of use:
 2. **Main List:** Full list of supported games with versions and dates.
 3. **Footer:** System hardware status and current date/time for reference.
 
+Menu changes in 2.0.0
+^^^^^^^^^^^^^^^^^^^^^
+
+- The menu is **animated**.
+- An **About** screen was added.
+- Holding **TEST** no longer breaks the menu.
+- **Boot last game** no longer relaunches a game that you quit on purpose.
+- The **Power off** entry works again.
+- The screen is detected correctly when the machine has several outputs
+  mirrored (clone mode).
+
 .. _settings_section:
+
 Settings menu
 ^^^^^^^^^^^^^
 

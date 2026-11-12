@@ -54,8 +54,10 @@ Follow these steps to perform an import using the FiestaFS-based Importer:
 2. **Insert the game disk.**
 
    - Connect the HDD containing the game using either:
+
      - A **USB-to-SATA converter**
      - A **direct SATA connection**
+
    - The disk can be inserted **before or after launching** the importer; the 
      system will detect it automatically.
 
@@ -68,8 +70,10 @@ Follow these steps to perform an import using the FiestaFS-based Importer:
         **Etching a disk image:**
 
         - If you have a game `.img` or compressed `.img.gz` file:
+
             - Use tools like **Balena Etcher** or **Rufus** to write the image 
               to your HDD or USB drive.
+
             - Ensure the writing process completes without errors to avoid read
               issues during import.
 
@@ -83,20 +87,24 @@ Follow these steps to perform an import using the FiestaFS-based Importer:
    The importer will execute the following tasks sequentially:
 
    - **Retrieve and validate the executable.**
+
      - The executable is no longer part of the standard OS partition.
      - It is stored in the **raw territory before the first partition**.
      - Two versions may exist; the importer automatically selects the **most
        recent executable**.
+
      - It checks the version to determine if the game is **fully updated**.
 
    - **Extract the first BIN file** from the main FiestaFS partition, which
      contains the core game data.
 
    - **Extract all update BIN files** stored **raw after the last partition**:
+
      - The importer scans the disk beyond the last partition boundary to locate
        and extract updates.
 
    - **Extract license keys** using the **Fiesta Updated File Finder (FUFF)**:
+
      - This involves parsing the **table of contents (TOC)** within FiestaFS to
        locate key data efficiently.
 
@@ -107,6 +115,7 @@ Follow these steps to perform an import using the FiestaFS-based Importer:
 
    - Once the process completes successfully, the system will **automatically
      reboot** to integrate the new game.
+
    - The newly imported game should appear in the game menu after reboot.
 
 Additional Notes
@@ -114,8 +123,10 @@ Additional Notes
 
 - Ensure that your game disk is updated to the **latest available version** 
   prior to import to avoid compatibility issues.
+
 - For etching compressed disk images (`.img.gz`), tools like **Balena Etcher** 
   handle decompression automatically during writing.
+
 - This importer features specialized handling for FiestaFS’s **non-partitioned
   update storage system**, unique to the Fiesta series architecture.
 
@@ -123,20 +134,25 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 
 - **Game not detected:**
+
   - Verify the HDD or USB drive is properly etched and connected.
   - Confirm updates are applied to the game before import.
 
 - **Dongle not detected:**
+
   - Ensure the Microdog 4.0 dongle is inserted securely.
   - Try a different USB port if detection fails.
 
 - **Executable version outdated:**
+
   - Update the game fully before performing the import.
 
 - **Import fails midway:**
+
   - Re-etch the disk image to eliminate corruption.
   - Check logs for file permission or mounting errors.
 
 - **Game not appearing after reboot:**
+
   - Retry the import process from the beginning.
   - Confirm that the correct dongle was used for the intended game.

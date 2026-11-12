@@ -65,9 +65,11 @@ Notes
 - Each game may have **unique installation requirements or detection methods**.
   Always follow any specific prompts displayed on the Importer screen. Specifics
   of the installation will be explained in further sections.
+
 - Ensure disks and dongles are **clean and properly connected** to avoid
   installation failures. Failures on the SATA cable or poor USB connection can
   interrupt the process.
+
 - If a game fails to install, retry the process from the beginning.
 
 The specifics for each type of game are written in the following sections.

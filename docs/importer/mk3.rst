@@ -69,53 +69,67 @@ Follow these steps to install an MK3 game using the importer:
    Below are the **accepted BIN/CUE filenames for each game**:
 
    - **Pump It Up The 1st DanceFloor**
+
      - `19990930.BIN` + `19990930.CUE`
 
    - **Pump It Up The 2nd DanceFloor: The Ultimate Remix**
+
      - `19991228.BIN` + `19991228.CUE`
      - `20000228.BIN` + `20000228.CUE`
 
    - **Pump It Up O.B.G: Oldies But Goodies!**
+
      - `20000508.BIN` + `20000508.CUE`
      - `20000603.BIN` + `20000603.CUE`
 
    - **Pump It Up O.B.G: Season Evoluion**
+
      - `20000827.BIN` + `20000827.CUE`
      - *(Note: This version requires only DATA1 and DATA2 during deployment)*
 
    - **Pump It Up The Collection**
+
      - `20001114.BIN` + `20001114.CUE`
 
    - **Pump It Up Perfect Collection**
+
      - `20001219.BIN` + `20001219.CUE`
 
    - **Pump It Up ExtrA**
+
      - `20010209.BIN` + `20010209.CUE`
      - `20010221.BIN` + `20010221.CUE`
      - `010209_1821.BIN` + `010209_1821.CUE`
      - `0102211851.BIN` + `0102211851.CUE`
 
    - **Pump It Up The Premiere 1**
+
      - `20010222.BIN` + `20010222.CUE`
      - `20010305.BIN` + `20010305.CUE`
 
    - **Pump It Up The Prex 1**
+
      - `20010901.BIN` + `20010901.CUE`
 
    - **Pump It Up The Premiere 2**
+
      - `20020311.BIN` + `20020311.CUE`
 
    - **Pump It Up The Rebirth**
+
      - `20020311.BIN` + `20020311.CUE`
 
    - **Pump It Up The Prex 2**
+
      - `20021014.BIN` + `20021014.CUE`
 
    - **Pump It Up The Premiere 3**
+
      - `20030317.BIN` + `20030317.CUE`
      - `20030328.BIN` + `20030328.CUE`
 
    - **Pump It Up The Prex 3**
+
      - `20030801.BIN` + `20030801.CUE`
      - `20031014.BIN` + `20031014.CUE`
      - `20030801MK3.BIN` + `20030801MK3.CUE`
@@ -124,8 +138,10 @@ Follow these steps to install an MK3 game using the importer:
 
    .. note::
       **Important:**  
+
       - Filenames may be **case-sensitive**. Make sure to put everything in
         uppercase.
+
       - Only one valid BIN/CUE pair is needed per game.  
       - Ensure files are **not placed inside folders**, but directly in the root
         of the USB drive.
@@ -138,6 +154,7 @@ Follow these steps to install an MK3 game using the importer:
 3. **Select the desired game** from the list.
 
 4. **Ensure the USB is inserted** when the importer starts.  
+
    - The importer will detect the BIN/CUE files automatically.
    - It is safe to insert the USB **before or after launching** the importer.
 
@@ -181,14 +198,17 @@ Troubleshooting
 ^^^^^^^^^^^^^^^
 
 - **Game not detected:**  
+
   - Ensure BIN/CUE files are named correctly and placed in the **root of the USB**.
   - Confirm USB is formatted as **FAT32**.
 
 - **Import process fails midway:**  
+
   - Reformat USB and copy files again.
   - Verify file integrity with checksums if available.
 
 - **Game not appearing after reboot:**  
+
   - Retry installation.
   - Check for missing security packages or license requirements in the importer
     configuration.

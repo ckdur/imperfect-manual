@@ -47,9 +47,11 @@ After connecting the disk(s):
 2. Power on the machine and enter the BIOS setup. This usually involves pressing
    the **DEL**, **F2**, or **F12** key immediately after turning on the system.
    The exact key will appear on-screen during startup.
+
 3. In the BIOS, navigate to the **Boot** settings.
 4. **Change the boot priority to select the Imperfect Collection disk**, to the
    disk connected to the higher-numbered SATA port.
+
 5. Save and exit the BIOS.
 
 Some newer motherboards and MK systems boot by default in **UEFI mode**, which
@@ -104,6 +106,33 @@ Collection* disk using MBR mode.
    - SATA cables and power connectors are firmly attached.
    - No Secure Boot option is enabled, as it may block unsigned MBR bootloaders.
 
+.. _boot_signed_section:
+
+Signed boot (2.0.0 and later)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+From version **2.0.0** the loader refuses to run anything that was not signed
+by the project:
+
+- The bootloader (grub) boots only a **signed kernel**. If the kernel is
+  missing its signature, the screen shows *Boot halted*.
+- The menu, the importer, PMOD and the scripts that start them are checked
+  against a detached signature before they run. The OS images are mounted only
+  if their dm-verity hash tree matches.
+- If **any** check fails, the machine simply **restarts**. There is no
+  fallback to an unchecked start.
+- Release images do not start a telnet server.
+
+In practice this means you should not hand-edit files in the loader's
+partitions: a modified menu, script or image will not run. Use the update
+mechanism instead (see :ref:`updates_section`). Details are in
+:ref:`security_section`.
+
+.. note::
+
+   This does not protect the boot sector of the disk itself: anyone who can
+   write to the disk can replace the bootloader.
+
 What to Expect
 ^^^^^^^^^^^^^^
 
@@ -112,6 +141,7 @@ screen. From here, some additional resizing steps will happen:
 
 - **The resizing of the base partition**. You notice this with the message `First boot. Resizing...`
   in the boot screen. This process takes some seconds, and will reboot the MK.
+
 - **Filesystem expansion**. This is the second resizing. Will use the previously
   available space to expand the filesystem where all the games will be installed.
 

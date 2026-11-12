@@ -20,6 +20,7 @@ PMOD Functionality
 .. note::
     Songs from the following games **cannot be detected by PMOD** due to
     compatibility limitations:
+
     - **1st dance floor**
     - **2nd dance floor**
     - **3rd dance floor - OBG**
@@ -34,6 +35,7 @@ Besides importing assets from other games, PMOD supports the addition of
 ### Song Import Requirements
 
 1. **USB Drive:**
+
    - Format: **FAT32**
    - Folder structure: Place all songs inside a folder named **`Songs`** in the root of the USB.
 
@@ -60,6 +62,7 @@ Besides importing assets from other games, PMOD supports the addition of
 
 - **Group folders** organize songs by category or theme.
 - Each **individual song folder** must contain:
+
   - A **chart file** (`.sm`, `.ssc`, etc.).
   - **Audio files** (`.ogg`, `.mp3`, etc.).
   - Optional background images, banners, or videos.
@@ -78,6 +81,7 @@ Follow these steps to import songs or song packages into PMOD:
 - Format the USB as **FAT32**.
 - Create a **`Songs` folder** and/or **`SongPackages` folder** in the root
   directory.
+
 - Copy your songs and packages into their respective folders as per the
   structure above.
 
@@ -102,6 +106,7 @@ The importer will provide options:
 
 - If **copying**, the importer will begin transferring all detected songs or
   packages to the internal PMOD filesystem.
+
 - If **deleting**, it will remove existing imported packages accordingly.
 
 6. **Reboot the system.**
@@ -139,3 +144,18 @@ Troubleshooting
 
 - **PMOD not appearing in importer menu:**
 - Ensure your Imperfect Collection version supports PMOD integration.
+
+PMOD6 standalone images
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Besides the full Imperfect Collection, PMOD is also released as a standalone
+image, named ``pmod6_arcade_vX.Y.Z_RELEASE.img.gz``. It comes in three
+flavors, depending on the filesystem used for the game partition:
+
+- ``pmod6_arcade_...`` - **vfat**
+- ``pmod6_arcade_ext_...`` - **ext2**
+- ``pmod6_arcade_ntfs_...`` - **NTFS** (mounted with ntfs-3g)
+
+They are etched and booted exactly like the Imperfect Collection (see
+:doc:`../start/etching` and :doc:`../start/boot`). The importer can copy the
+latest PMOD release onto an existing Imperfect Collection disk.
