@@ -139,7 +139,8 @@ The name of the machine's default profiles
 ------------------------------------------
 
 For ``/SETTINGS/profiles/P1`` and ``P2`` only, the menu writes ``name=``
-itself: the name of your license. It keeps doing so (for example after the
+itself: the name of your license. The files are shipped with the name
+``PLAYER``, which the menu replaces when it reads the license. It keeps doing so (for example after the
 machine gets another license) for as long as the name is still the one it
 wrote. Once you type a name of your own, the menu leaves it alone. Nothing
 else in the file is ever written for you, and profiles on USB sticks are

@@ -49,7 +49,8 @@ Changing the default profiles
 
 The two default profiles are the files
 ``/SETTINGS/profiles/P1/profile.ini`` and ``/SETTINGS/profiles/P2/profile.ini``
-(:ref:`format <online_profile_ini_section>`). They are created by the menu as
-soon as the machine is licensed, **named after your license**. The menu keeps
+(:ref:`format <online_profile_ini_section>`). They are shipped with the image,
+and the menu **names them after your license** as soon as the machine is
+licensed (and creates them if they are missing). The menu keeps
 that name in step with the license until you type one of your own: from then
 on it is yours and is left alone.

@@ -23,8 +23,8 @@ real reader that is plugged in is always used as it is.
    * - Phoenix
      - ``/SETTINGS/F23/ampass.ini``
 
-Each one is created with defaults the first time its game starts. You
-normally never touch it. There is also a ``/SETTINGS/ampass.ini``, written by
+Each one is shipped with the image and created again with the defaults if it
+is missing. You normally never touch it. There is also a ``/SETTINGS/ampass.ini``, written by
 the menu: these three games do not read it, so changing it has no effect on
 them.
 
@@ -43,6 +43,9 @@ they are.
    uid=04a1b2c3d4e5f6
    [P2]
    uid=04f6e5d4c3b2a1
+
+The shipped file says ``uid=auto`` for both cards, as shown in the table
+below, and looks like the example above after the game has started once.
 
 .. list-table::
    :header-rows: 1
@@ -71,10 +74,12 @@ they are.
        has none assigned (a machine with fresh settings). ``0`` leaves it to
        the game's *CARD READER* page.
    * - ``[P1]`` / ``[P2]`` ``uid``
-     - random
-     - The number of the emulated card of each side. It is what tells the
-       system "this is the machine's default profile of that side": do not
-       change it unless you know why.
+     - ``auto``
+     - The number of the emulated card of each side. ``auto`` becomes a
+       random number the first time the file is used and is kept in the
+       file, so every machine has its own. It is what tells the system "this
+       is the machine's default profile of that side": do not change it
+       unless you know why.
 
 .. note::
 

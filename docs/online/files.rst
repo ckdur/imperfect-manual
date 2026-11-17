@@ -21,13 +21,13 @@ On the machine (SETTINGS partition)
    * - ``/SETTINGS/online.ini``
      - Yes
      - Network settings and USB port assignment.
-       :ref:`Format <online_online_ini_section>`. Written with the defaults
-       the first time Prime, Prime 2, XX or Phoenix starts.
+       :ref:`Format <online_online_ini_section>`. Shipped; created with the
+       defaults if missing.
    * - ``/SETTINGS/profiles/P1/profile.ini``
      - Yes
      - Default profile of the left side.
-       :ref:`Format <online_profile_ini_section>`. Created by the menu when
-       the machine is licensed.
+       :ref:`Format <online_profile_ini_section>`. Shipped; the menu names it
+       after your license; created if missing.
    * - ``/SETTINGS/profiles/P2/profile.ini``
      - Yes
      - Default profile of the right side.
@@ -54,6 +54,19 @@ On the machine (SETTINGS partition)
    * - ``/SETTINGS/import.key``
      - No
      - The import key of this disk, see :ref:`license_import_section`.
+
+**Shipped with the image.** The image already holds ``online.ini``, both
+default ``profile.ini`` files and the ``ampass.ini`` files, with sensible
+defaults, so you can open and edit them from the very first boot. The
+defaults carry no machine-specific values: the default profiles are named
+``PLAYER`` until the menu names them after your license when the machine is
+licensed, and the card numbers in ``ampass.ini`` say ``uid=auto`` until the
+machine makes its own the first time the file is used (menu or game). Each
+one is also **created again when it is missing**: delete a file and the
+default comes back the next time it is needed. Machines updated from an
+older version do not have the shipped files yet; they get them the same way,
+when first needed (first start of Prime, Prime 2, XX or Phoenix, first
+license, first start of each game).
 
 **How to reach them.** SETTINGS is the second partition of the disk, in the
 ext2 format. Connect the disk to a computer running Linux, or start the

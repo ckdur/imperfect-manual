@@ -3,8 +3,9 @@
 Reference: online.ini
 ~~~~~~~~~~~~~~~~~~~~~
 
-**Where:** ``/SETTINGS/online.ini`` (:ref:`online_files_section`). Written
-with the defaults below the first time Prime, Prime 2, XX or Phoenix starts;
+**Where:** ``/SETTINGS/online.ini`` (:ref:`online_files_section`). It is **shipped with the image** and written again
+with the same defaults if it is missing (for example on a machine updated
+from an older version, the first time Prime, Prime 2, XX or Phoenix starts);
 yours from then on. Changes are picked up the next time a game starts.
 
 .. code-block:: ini
