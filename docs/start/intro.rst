@@ -24,3 +24,4 @@ installation experience.
    licensing
    compat
    updates
+   online
