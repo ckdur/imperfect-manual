@@ -104,6 +104,66 @@ There are special licenses that allow the migration of data totally safe between
 hard disks, but those are locked behind **donation percs**. If you choose to
 support us, this feature will be available.
 
+.. _license_import_section:
+
+Importing games needs a license made for this disk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since 2.0.0 a license does two things, and they do not depend on the same
+data:
+
+- It **licenses the machine**: your name appears in the menu and the games
+  that are installed can run. This part is tied to the machine, so a
+  ``license.txt`` you kept keeps working on that machine.
+- It **allows the machine to import games** (the *Game Transfer* feature).
+  This part is tied to an *import key* that the system creates on the disk the
+  first time you make a ``request.txt``. The license you get back carries a
+  certificate for that key.
+
+The import key lives on the disk, in the SETTINGS partition. **Writing the
+image to the disk again creates a new disk with no import key**, so the
+``license.txt`` of the previous installation still licenses the machine but
+can no longer import:
+
+- the menu shows your name as usual;
+- the importer stops at once with::
+
+     This machine cannot sign imported games: ...
+     Use "Relicense" in the menu: it writes request.txt to the USB
+     drive; the license you get back carries the import certificate.
+
+What the message calls "Relicense" is the **USB System Registration** entry
+of the Settings menu.
+
+What to do: on the newly written disk, make a **new** ``request.txt`` (step 2
+above), send it to your licenser and install the ``license.txt`` you get back.
+Do this before you plan an import session. Copying an older ``license.txt``
+again does not help.
+
+Keeping the import key (no new license needed)
+""""""""""""""""""""""""""""""""""""""""""""""
+
+If you know that you are going to write the disk again, you can skip the round
+trip with your licenser: the import key is one small file,
+``/SETTINGS/import.key`` (:ref:`how to reach the SETTINGS partition
+<online_files_settings_section>`).
+
+1. **Before** writing the disk, copy ``import.key`` out of its SETTINGS
+   partition and keep it together with your ``license.txt``.
+2. After writing the disk and letting it boot once, put ``import.key`` back
+   into the SETTINGS partition of the new disk.
+3. Install your ``license.txt`` as usual. The order of steps 2 and 3 does not
+   matter.
+
+The license you already have then imports again. The key only fits the
+machine and the license it was made for.
+
+.. note::
+
+   Updating a machine with **USB Update** does not touch the SETTINGS
+   partition: the import key stays, and the license you have keeps importing.
+   Only writing the whole image again loses it.
+
 .. _license_migration_section:
 
 License migration (2.0.0 and later)

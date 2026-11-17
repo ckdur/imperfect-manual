@@ -34,6 +34,7 @@ file. The licensing of this documentation is under Creative Commons Attribute
    :caption: Contents:
 
    start/intro
+   online/intro
    importer/intro
    games/intro
    dev/intro
