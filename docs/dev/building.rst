@@ -59,9 +59,9 @@ No ``sudo`` is required.
   libraries for ``ftgl libusb-1.0 gl glu glew freetype2 fontconfig``, the Tcl
   headers, and ``autoconf``, ``automake``, ``libtool`` and ``gettext`` (the grub
   submodule is bootstrapped on the host).
-- **Game data**, which is not in the repository, at fixed paths:
-  ``/media/Extended/Games/PIU/plugin`` and
-  ``/media/Extended/Games/PIU/contents/XSY`` (PMOD content).
+- **Game data**, which is not in the repository, at a fixed path:
+  ``/media/Extended/Games/PIU/plugin``. The PMOD content comes from the
+  ``PMODTHEME`` submodule.
 - **The update-signing key** ``pki/update_signing.key`` (secret, never
   committed). The build refuses to continue without it.
 
