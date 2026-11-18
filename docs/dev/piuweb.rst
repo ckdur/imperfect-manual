@@ -44,6 +44,9 @@ All JSON; errors carry a ``code`` (``no_license``, ``not_installed``,
   ``set_avatar``, ``set_title``; refused ones are reported one by one.
 - ``DELETE /api/player/<pid>/<game>/pending``: clear the queue.
 - ``GET /api/songs/<game>`` and ``/img/<game>/...``: titles and pictures.
+- ``GET /api/map/<game>``: the mission map (NX2/NXA World Max: zones, tiles,
+  mission points and links; Fiesta/Fiesta EX: the hexagon grid), tiles at
+  ``/img/<game>/map/<zone>_<n>``.
 
 Codecs and the queue
 ^^^^^^^^^^^^^^^^^^^^
@@ -70,7 +73,35 @@ Titles, banners and avatars are read from the games' data at run time and
 never shipped. On the cabinet the packages are encrypted, so the menu stages
 the few files needed while no game runs, and the daemon builds a per-game
 cache in ``/SETTINGS/piuweb`` that is encrypted and bound to the machine.
-Deleting it only makes it rebuild.
+Deleting it only makes it rebuild; a cache made by an older version is
+rebuilt once by itself.
+
+The same way, from the game data at run time:
+
+- **NX2/NXA**: avatars from ``BGA/USB_CHARACTER.DAT`` (a dongle-locked
+  ``RESPAC2`` archive of DDS pictures, read as PMod reads it); banners of the
+  songs repeated in special channels are the base song's; the World Max map
+  from ``MISSION.TXT`` (positions, links) and the map tiles in the ``BGA``
+  archives.
+- **Fiesta family**: Quest World missions from the song list's mission
+  entries and the stick save's records; the hexagon zones of Fiesta and
+  Fiesta EX from ``MAP/*.DAT``.
+- **Prime, Prime 2, XX**: Quest Zone quests and their goal text from the
+  mission step files' headers.
+
+Formats: ``elfloader/server/piuweb/songs/FORMATS.md``.
+
+Titles
+^^^^^^
+
+XX and Phoenix title names are in ``piuweb/titles_xx.json`` and
+``titles_phoenix.json`` (Phoenix from the game's own title table, XX
+transcribed from the title pictures). Titles are earned by rules in
+``elfloader/server/piuserver/title_rules.py``, part of the program and not of
+the settings: the game server checks them at login and after every score and
+keeps the earned numbers in ``save.json``; it never sends an unearned title
+(the games themselves accept any number) and the page refuses to set one.
+Titles without a rule cannot be earned until a rule is added.
 
 The QR overlay
 ^^^^^^^^^^^^^^

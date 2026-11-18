@@ -42,8 +42,15 @@ What each game offers
     (by its own total mileage, see below) is marked and cannot be bought.
   - **Hidden charts** are not sold: as in the game they come from World Max
     missions only.
-  - **Avatars** are free: choose any.
-  - **Missions.** The World Max missions, with which ones are done.
+  - **Avatars** are free: choose any, shown with the game's own pictures.
+  - **Missions.** The World Max missions, with which ones are done, as a
+    **map** or a **list** (the switch above them). The map is the game's own
+    World Max map with a mark on every mission: green when cleared, yellow
+    when it can be played (a neighbour is cleared), grey when still locked,
+    and the paths between missions. NX Absolute has its world map plus the
+    maps of its lands (WestPalZ and the space zones). Phantomia missions show
+    once played. Tap a mission to see it; drag, pinch or use the buttons to
+    move and zoom.
   - **Records.** Your best scores.
 
 .. image:: ../img/profile_manager_nx2_shop.png
@@ -57,18 +64,39 @@ What each game offers
   (``ntdec/rewards_fiesta.json`` or ``ntdec/rewards_fex.json``): deleting it
   gives the PP back.
 
+  **Missions**: the Quest World missions as a **map** of the game's hexagon
+  zones (Mission Zone, the Hell zones, Skill Up, Co-op, Heaven) or a **list**.
+  Each mission shows its song, kind (Single, Double, Co-op, Skill Up), how
+  often it was played and the best grade; cleared ones are green. Warp
+  hexagons open the zone they lead to. What a mission asks of you is not
+  shown: the game keeps it in a form not read yet.
+
 **Fiesta 2**
   **Rewards** are claimed by level and by mission count, as the REWARD button
   of PumBi did: charts, Music Train slots and the music tempo and skin
   options. Nothing is bought: a reward is claimable once its level or mission
-  count is reached.
+  count is reached. The **missions** are listed as for Fiesta EX (Fiesta 2
+  has no mission map).
 
 **Prime, Prime JE, Prime 2, XX and Phoenix**
   A *My Page* in the style of the piugame site: your **name**, **avatar**,
-  **title** number and your **best scores**. These are written to your
+  **title** and your **best scores**. These are written to your
   ``profile.ini`` (:ref:`format <online_profile_ini_section>`) at once and
   the game uses them at the next login. Scores are only shown: the page never
   changes them.
+
+  - **Quests** (Prime, Prime 2, XX): the Quest Zone, with each quest's goal
+    as the game words it, your plays and best grade. XX also tells cleared
+    from failed; Prime and Prime 2 do not report that to the machine, so
+    there only plays and grades are shown.
+  - **Titles** (XX, Phoenix) are shown by name, with what earns them. A title
+    is **earned**: the machine's game server checks every song you play
+    against the title's rule and keeps the titles you earned in your profile.
+    Only earned titles can be chosen (plus BEGINNER in Phoenix and "no title"
+    in XX). Titles whose rule the machine cannot check (tournaments, staff,
+    rankings, ...) cannot be earned here; the rules come with the updates,
+    and requirements marked *unconfirmed* come from fan sources about the
+    original game. A new Phoenix profile starts as BEGINNER.
 
 Song names and banners are read from the game's own data on the machine when
 the page is shown; nothing of the games is on the page's server or in this
