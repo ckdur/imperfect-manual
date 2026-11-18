@@ -23,6 +23,9 @@ real reader that is plugged in is always used as it is.
    * - Phoenix
      - ``/SETTINGS/F23/ampass.ini``
 
+The older games and Prime do not use these files: they take a tapped card from
+the real reader directly (:ref:`online_card_profiles_section`).
+
 Each one is shipped with the image and created again with the defaults if it
 is missing. You normally never touch it. There is also a ``/SETTINGS/ampass.ini``, written by
 the menu: these three games do not read it, so changing it has no effect on

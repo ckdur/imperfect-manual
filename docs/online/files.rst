@@ -37,6 +37,9 @@ On the machine (SETTINGS partition)
    * - ``/SETTINGS/profiles/cards/<card number>/``
      - ``profile.ini`` only
      - The same two files for every real AM.PASS card used on the machine.
+       For NX2 to Fiesta 2 and Prime the folder also holds the game's save
+       files under their stick names, as if it were the stick
+       (:ref:`online_card_profiles_section`).
    * - ``/SETTINGS/F17/ampass.ini``, ``/SETTINGS/F19/ampass.ini``,
        ``/SETTINGS/F23/ampass.ini``
      - Rarely
@@ -51,6 +54,11 @@ On the machine (SETTINGS partition)
      - No
      - What the game server did during the last game.
        :ref:`How to read it <online_trouble_section>`.
+   * - ``/SETTINGS/piuweb/``
+     - No
+     - Song list and pictures of each installed game, cached for the
+       :ref:`Profile manager <online_web_section>`. Encrypted and tied to this
+       machine; delete it and it is rebuilt.
    * - ``/SETTINGS/import.key``
      - No
      - The import key of this disk, see :ref:`license_import_section`.
@@ -112,6 +120,25 @@ On the player's USB stick
    * - ``fiesta2_save.bin``, ``fiesta2_rank.bin``
      - No
      - Fiesta 2's own save.
+
+The Profile manager adds to the stick (:ref:`online_web_section`):
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 14 46
+
+   * - File
+     - You edit it
+     - What it is
+   * - ``ntdec/pending/<game>.json``
+     - No
+     - Changes made from the phone that wait for the game to load the save.
+   * - ``ntdec/backup/``
+     - No
+     - The save files as they were before the last change was applied.
+   * - ``ntdec/rewards_fiesta.json``, ``ntdec/rewards_fex.json``
+     - No
+     - PP ledger of Fiesta and Fiesta EX.
 
 The ``.bin`` files sit in the root of the stick, where the games expect them.
 They are created the first time the game finds none

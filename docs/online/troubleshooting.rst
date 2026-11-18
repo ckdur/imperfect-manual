@@ -82,6 +82,28 @@ save. Delete that game's two ``.bin`` files from the stick to start over
 **The ONLINE MATCHING channel is not in the list.**
   See :ref:`online_matching_section`.
 
+**Pressing F8 shows no QR code.**
+  The machine has no network address yet (check the cable), ``[web] enabled``
+  is ``0``, or ``qr_key`` names another key. The key is read from a keyboard
+  plugged into the machine, whatever program has the focus.
+
+**The page says "This machine is not licensed".**
+  The cabinet has no valid license (:ref:`license_import_section`); the page
+  works as soon as it has one.
+
+**The song names and pictures are missing ("no songs yet").**
+  After an update or on a new machine, each installed game is cached once in
+  the background, which takes a while and happens only between games. Try
+  again later; if a game never gets its list, delete ``/SETTINGS/piuweb`` and
+  restart the machine.
+
+**My changes were not applied.**
+  Changes to the stick saves of NX2 to Fiesta 2 made while that game runs
+  wait on the stick (``ntdec/pending``) and are applied before the game next
+  loads the save, or when it exits. Leave the stick in until the game has
+  exited, and check the queue on the page. A change that is no longer
+  allowed (for example the mileage was spent in the meantime) is dropped.
+
 **The importer refuses to import after the disk was written again.**
   That is about the license, not about this chapter:
   :ref:`license_import_section`.

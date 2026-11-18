@@ -19,7 +19,7 @@ What Each Game Does
      - Machine, or your USB stick
      - Card on the reader (real or emulated)
      - No (the game has no such mode)
-   * - Prime
+   * - Prime, Prime JE
      - Machine, or your USB stick
      - By itself, once a credit is in
      - No (the game has no such mode)
@@ -27,6 +27,11 @@ What Each Game Does
      - Your USB stick (the game's own save)
      - The game reads the stick
      - No
+
+Prime Japanese Edition (V1.17.0) plays online exactly like Prime: it talks to
+the game server that runs next to it on the machine (it connects to port
+60006, where Prime uses another one), so it logs in and keeps profiles the
+same way.
 
 A few things hold for all of them:
 
@@ -39,6 +44,8 @@ A few things hold for all of them:
   name and the avatar you want in each game
   (:ref:`its format <online_profile_ini_section>`), whether it sits on a USB
   stick or is one of the machine's two default profiles.
+- **Profiles can be managed from a phone.** Press F8 on a keyboard and scan
+  the code: :ref:`online_web_section`.
 - **The machine's default profiles** are for whoever plays without a stick:
   one for the left side (P1) and one for the right side (P2). They are named
   after your license until you give them a name of your own.

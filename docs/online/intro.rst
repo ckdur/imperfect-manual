@@ -15,9 +15,12 @@ This chapter is split so that you can go straight to what you need:
 - **Using it**: :ref:`what each game does <online_overview_section>`,
   :ref:`USB sticks <online_usb_section>`, :ref:`logging in <online_login_section>`
   and :ref:`Online Matching <online_matching_section>`.
+- **From your phone**: :ref:`the Profile manager <online_web_section>`,
+  a web page of the cabinet to see and edit your profile.
 - **Reference**: :ref:`where every file is <online_files_section>`, and the
   format of each one: :ref:`profile.ini <online_profile_ini_section>`,
-  :ref:`online.ini <online_online_ini_section>` and
+  :ref:`online.ini <online_online_ini_section>` (with the ``[web]`` section
+  of the Profile manager) and
   :ref:`ampass.ini <online_ampass_ini_section>`.
 - **When something does not work**: :ref:`the server log and what its lines
   mean <online_trouble_section>`.
@@ -30,6 +33,7 @@ This chapter is split so that you can go straight to what you need:
    usb
    login
    matching
+   profile_manager
 
 .. toctree::
    :maxdepth: 2

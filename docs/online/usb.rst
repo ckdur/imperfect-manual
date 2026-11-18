@@ -34,10 +34,10 @@ What happens in each game
   one, and your scores are written to the stick after every song. The stick
   is only in use for an instant each time: you can pull it out between songs.
 
-**Prime**
-  The game logs you in from the stick by itself once a credit is in. The
-  stick gets a small file, ``prime.bin``: it is your identity in this game,
-  keep it.
+**Prime, Prime JE**
+  The game logs you in from the stick by itself once a credit is in, in both
+  versions. The stick gets a small file, ``prime.bin``: it is your identity
+  in this game, keep it.
 
 **NX2, NX Absolute, Fiesta, Fiesta EX, Fiesta 2**
   These games keep their own save on the stick. If the stick has none, one is
@@ -49,6 +49,46 @@ What happens in each game
   NX Absolute get a profile with a random name of the form ``PIU1234``, and
   Fiesta, Fiesta EX and Fiesta 2 create their own profile as they always
   did. Write ``profile.ini`` first if you want your name.
+
+.. _online_card_profiles_section:
+
+AM.PASS cards instead of a stick
+--------------------------------
+
+On NX2, NX Absolute, Fiesta, Fiesta EX, Fiesta 2 (the Chinese builds of NX2
+and NX Absolute too), Prime and Prime JE you can also play with an AM.PASS
+card, and it needs no stick. Tap the card on a card reader: **reader 1 is
+player 1 and reader 2 is player 2**. That side then has a profile of its own
+for that card, which works exactly as a stick would.
+
+- **Where it lives.** The folder ``/SETTINGS/profiles/cards/<card number>/``
+  acts as that player's USB stick: the game's save files are in it under the
+  same names as on a stick, and ``profile.ini`` sits at its top
+  (:ref:`where the files are <online_files_section>`). It is the same folder
+  that Prime 2, XX and Phoenix use for that card, so one card has one folder
+  for every game. Copying the folder onto a FAT32 stick makes it that stick.
+- **A real stick always wins.** A stick in the player's port is used and the
+  card is ignored for that side.
+- **First use.** The profile is named ``CARD`` plus the last four hex digits
+  of the card number (for example ``CARDE5F6``): a name every game accepts.
+  If the card already has a ``profile.ini`` (it played XX first, or you
+  changed the name on the :ref:`Profile manager <online_web_section>`), that
+  name is used.
+- **Each card is its own profile.** Cards never share a save, and a card that
+  is in use on one side is refused on the other.
+- **How long it lasts.** From the tap until the game lets go of the profile:
+  in NX2 and NX Absolute that is when the title screen comes back, so the
+  next player taps a card of their own. Tapping another card on the same
+  side swaps to it. A card left lying on the reader counts as one tap.
+- **Prime and Prime JE** log the card in by its number, into the same folder
+  as Prime 2, XX and Phoenix. With a card reader plugged in, the default
+  login (no stick, no card) waits 8 seconds for a tap instead of a few
+  moments, so you have time to tap.
+
+Known limit: on the Fiesta games a card may stay with its side after the
+song session, until another card is tapped there or the game exits.
+
+``[usb] enabled=0`` in ``online.ini`` turns cards off together with sticks.
 
 .. _online_usb_existing_section:
 

@@ -31,18 +31,22 @@ select the player. Selecting first clears the assignment.
    If nobody is logged in after a credit, change ``repeat_ms`` as described in
    :ref:`online_ampass_ini_section`.
 
-Prime
------
+Prime and Prime JE
+------------------
 
-Prime has no card. Once a credit is in, each side is logged in by itself:
-from the stick in its port, or else with the machine's default profile.
+Prime and Prime Japanese Edition have no card. Once a credit is in, each side is logged in by itself:
+from the stick in its port, or else with the machine's default profile. With
+an AM.PASS card reader attached you can tap a card instead
+(:ref:`online_card_profiles_section`); the default profile then waits 8
+seconds for a tap before it logs in.
 
 NX2, NX Absolute, Fiesta, Fiesta EX, Fiesta 2
 ---------------------------------------------
 
 There is no login: the game loads the profile of the stick in your port when
-you join. Without a stick you play without a profile, as on the original
-machine.
+you join. With no stick, tap an AM.PASS card on your side's reader and the
+card's profile is used instead (:ref:`online_card_profiles_section`).
+Without either you play without a profile, as on the original machine.
 
 Changing the default profiles
 -----------------------------
