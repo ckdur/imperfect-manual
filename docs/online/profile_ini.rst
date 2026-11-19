@@ -117,6 +117,10 @@ games; a number outside the game's range also becomes 0 there.
      - Fiesta 2
      - ``avatar``
      - 0-259
+   * - ``[infinity]``
+     - Infinity
+     - ``name``
+     - only the name (up to 12 characters); Infinity has no avatar here
    * - any of them
      -
      - ``name``
@@ -134,6 +138,8 @@ When it is read
 - **NX2, NX Absolute, Fiesta, Fiesta EX, Fiesta 2:** once, when the game finds
   no save of its own on the stick and one is created. Afterwards the game's
   save rules (:ref:`online_usb_existing_section`).
+- **Infinity:** once, when the stick has no ``Pump It Up Infinity`` folder
+  yet (:ref:`how <online_usb_infinity>`).
 
 The name of the machine's default profiles
 ------------------------------------------

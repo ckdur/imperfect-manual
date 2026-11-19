@@ -91,6 +91,21 @@ The same way, from the game data at run time:
 
 Formats: ``elfloader/server/piuweb/songs/FORMATS.md``.
 
+Infinity
+^^^^^^^^
+
+Infinity (a StepMania 5 game) finds sticks on its own: it lists
+``/sys/block``, reads ``/etc/fstab`` for a mount point, runs ``mount`` itself
+and gives player 1 the first stick on an even USB port, player 2 the first on
+an odd one. ``cpio_trap/menugl/infusb.c`` (preloaded by ``infinity.sh``
+only, shipped inside the Infinity package) shows it two stand-in disks for
+the sticks of the cabinet's port rule, does the mount and creates
+``Pump It Up Infinity/Editable.ini`` from ``profile.ini``
+(``cpio_trap/menugl/usbprofile/INFINITY_USB.md``). The page reads
+``Stats.xml`` (signed by the game, so never written) with
+``elfloader/server/piuweb/infinity.py``; the Mission Zone list is
+``piuweb/missions_infinity.json``, from the theme's ``Mission.lua``.
+
 Titles
 ^^^^^^
 

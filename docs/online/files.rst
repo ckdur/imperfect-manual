@@ -120,6 +120,10 @@ On the player's USB stick
    * - ``fiesta2_save.bin``, ``fiesta2_rank.bin``
      - No
      - Fiesta 2's own save.
+   * - ``Pump It Up Infinity/``
+     - No
+     - Infinity's own profile (``Editable.ini``, ``Stats.xml`` and its
+       signatures, ``LastGood/``). Created from ``profile.ini`` when missing.
 
 The Profile manager adds to the stick (:ref:`online_web_section`):
 

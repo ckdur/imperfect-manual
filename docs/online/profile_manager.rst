@@ -98,6 +98,21 @@ What each game offers
     and requirements marked *unconfirmed* come from fan sources about the
     original game. A new Phoenix profile starts as BEGINNER.
 
+**Infinity**
+  Infinity keeps its profile on your stick, in the folder
+  ``Pump It Up Infinity`` (:ref:`how the stick is used <online_usb_infinity>`).
+  The page shows it as a *My Page*: your name, sessions, play time,
+  calories and Mission Zone experience; **Best Scores** (per chart: the song,
+  Single or Double and the difficulty, the grade as the game's result screen
+  shows it, the score and how often you played it); **Plays** (the scores the
+  game keeps on the stick, newest first: it keeps the best few of every
+  chart, not every play); and **Missions**, the Mission Zone by zone with
+  each mission's goal, whether you passed it (and how many times, up to
+  "3+"), your best grade in it and which zones your experience has opened.
+  The page only reads the profile: the game signs it, and a profile changed
+  by anyone else would be refused by the game. The song's name is its folder
+  name in the game; there are no banners.
+
 Song names and banners are read from the game's own data on the machine when
 the page is shown; nothing of the games is on the page's server or in this
 manual. The first time after an update, a game's list is built in the

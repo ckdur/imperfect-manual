@@ -50,6 +50,20 @@ What happens in each game
   Fiesta, Fiesta EX and Fiesta 2 create their own profile as they always
   did. Write ``profile.ini`` first if you want your name.
 
+.. _online_usb_infinity:
+
+**Infinity**
+  Infinity keeps its own profile on the stick, in the folder
+  ``Pump It Up Infinity``, and saves it at the end of your session. The
+  machine shows the game only the sticks of the two players' ports (the same
+  rule as every other game, :ref:`below <online_usb_ports_section>`), so the
+  stick in your port is yours; a stick in any other port is not seen. If the
+  stick has no Infinity profile yet and has a ``profile.ini``, the folder is
+  created with your name and the game starts a new profile with it; without
+  ``profile.ini`` the game makes a nameless one. A profile that is already
+  there, made here or on any other Infinity machine, is never touched.
+  Pull the stick out only after the game has saved (the end of the session).
+
 .. _online_card_profiles_section:
 
 AM.PASS cards instead of a stick
