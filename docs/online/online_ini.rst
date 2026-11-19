@@ -171,3 +171,12 @@ They are read at every request: no restart is needed.
    * - ``pads``
      - ``1``
      - ``0`` hides the pad presses and the lights.
+   * - ``press``
+     - ``0``
+     - ``1`` lets the operator **press** the pads and the service, test and
+       coin buttons from the pads page (see
+       :ref:`online_streaming_section`). It also needs ``press_key``.
+   * - ``press_key``
+     - empty
+     - The operator key the pads page asks for before it may press. Empty:
+       nobody may press, whatever ``press`` says.

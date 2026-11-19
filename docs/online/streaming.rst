@@ -30,8 +30,10 @@ address of the Profile manager (the F8 QR code) followed by:
 ``/live/pads.html``
   The two pads only: a panel is filled while it is pressed and glows while
   its light is on. This replaces the old broadcaster (``broadcaster.py`` and
-  its port): there is nothing to install, and nothing can be pressed from the
-  page.
+  its port): there is nothing to install.
+
+``/live/pads.html?control=1``
+  The same page with **pressing**, for the operator (see below).
 
 ``/api/live`` and ``/api/live/stream``
   The same data as JSON, and as a live stream (Server-Sent Events), for
@@ -53,6 +55,27 @@ the winner.
 
 **Players and scores** of the network games (Prime to Phoenix): the names that
 logged in and the last scores.
+
+Pressing from the page (operator)
+---------------------------------
+
+Like the old broadcaster, the pads page can also press: the panels of both
+pads (click, or touch with several fingers at once; a panel stays down while
+it is held), the keys **Q E S Z C** (player 1) and **R Y G V N** (player 2) of
+the PC's keyboard, and the buttons SERVICE, TEST, COIN1, COIN2 and CLEAR
+(keys 1 to 5).
+
+This controls the machine, so it is separate from the streaming switch and
+off by default: set ``press=1`` **and** an operator key ``press_key=...`` in
+the ``[stream]`` section (:ref:`online_stream_ini_section`). Open
+``/live/pads.html?control=1``, type the key and press *Take control*.
+
+- Only one device at a time has control. Another one is refused until the
+  first gives it back or goes silent.
+- Nothing stays pressed: everything is let go when the page loses focus, is
+  hidden or closed, or when the machine hears nothing from it for 1.5
+  seconds (for example a lost Wi-Fi connection).
+- The live pages and the OBS overlay never press.
 
 What is public
 --------------
