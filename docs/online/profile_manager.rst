@@ -113,6 +113,28 @@ What each game offers
   by anyone else would be refused by the game. The song's name is its folder
   name in the game; there are no banners.
 
+**Zero and NX**
+  These games keep no save. At the end of a credit played by **one** player
+  they show an *Internet ranking* code (``XXXX-XXXX-XXXX-XXXX``) that players
+  once typed on piugame.com. The page records it for you:
+
+  - **On this cabinet**, nothing to do: while Zero or NX runs, every stage you
+    play (song, chart, score, grade, the judgments and max combo) and the code
+    of the credit are written to the profile of **your side** (your stick in
+    that side's port, else the machine's profile of that side, as for the
+    other games). The live pages show the song and the scores too
+    (:ref:`online_streaming_section`).
+  - **A code from elsewhere** (a photo of another machine's screen, an old
+    note): type it in *Ranking codes* or *My Page*. It is checked (a wrong
+    character is caught by the code's checksum) and added once.
+
+  A code holds the credit's **total score** and its **four songs**, nothing
+  else (no grade, name, machine or date), so a typed code adds a credit, not
+  stage records. *Best Scores* and *Plays* come from the stages played on
+  this cabinet. Song names of a typed code appear once the game has run on
+  the machine (the names come from the game itself). The format is described
+  in ``elfloader/server/piuweb/DESIGN.md``, "Internet ranking codes".
+
 Song names and banners are read from the game's own data on the machine when
 the page is shown; nothing of the games is on the page's server or in this
 manual. The first time after an update, a game's list is built in the
