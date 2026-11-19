@@ -86,8 +86,9 @@ The ``[usb]`` section
      - The USB port of player 2.
 
 With ``p1`` and ``p2`` both empty, the stick on the lowest port is player 1
-and the next one player 2. How to find the port names:
-:ref:`online_usb_ports_section`.
+and the next one player 2. The profile web's **USB ports** page sets both
+by plugging a stick in, and how to find the port names by hand:
+:ref:`online_usb_ports_section`. A change takes effect without a restart.
 
 .. _online_web_ini_section:
 
@@ -133,6 +134,11 @@ Settings of the :ref:`Profile manager <online_web_section>`.
      - The address the code stands for. Empty: ``http://<address of the
        cabinet>:<port>/``. Set it only if phones reach the cabinet under
        another name or address.
+   * - ``operator_key``
+     - empty
+     - The key the :ref:`USB ports page <online_usb_ports_section>` asks
+       for before it changes ``[usb] p1=`` / ``p2=``. Empty: anybody who
+       can open the page may change them.
 
 .. warning::
 

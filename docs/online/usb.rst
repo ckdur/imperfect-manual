@@ -120,7 +120,32 @@ Which USB port is whose
 
 Out of the box, a single stick belongs to player 1 and a second one to
 player 2 (the lower port number is player 1). That is wrong as soon as
-player 2 comes alone, so tell the machine once which port is which:
+player 2 comes alone, so tell the machine once which port is which.
+
+**The easy way: the profile web's USB ports page.** Open the cabinet's
+profile web (:ref:`how <online_web_section>`) and choose
+**USB ports** at the top. It lists the sticks plugged in now, with their
+port and the player each one counts as, and refreshes by itself.
+
+* Plug a stick into the port meant for player 1 and press **Assign to P1**
+  on its line; the same for player 2. Or press **Assign P1: plug the stick
+  now** and plug a stick within 30 seconds: whatever port it lands in
+  becomes player 1's, so you never have to tell the ports apart.
+* **Clear** forgets one side, **Swap P1 and P2** exchanges them. A port
+  given to one player is taken away from the other.
+* A stick behind a USB hub is shown with a warning: NX2, NXA, Fiesta and
+  Fiesta EX only see sticks in a port of the machine itself (Fiesta 2 and
+  Prime also behind a hub in its first port); Prime 2, XX and Phoenix see
+  any port.
+* The page writes ``[usb] p1=`` / ``p2=`` into ``/SETTINGS/online.ini`` and
+  leaves the rest of the file as it was. It takes effect at once: the next
+  login reads it, and a game that is running (NX2 to Fiesta 2, Prime)
+  follows it within a second. No restart is needed.
+* To keep visitors of the page from changing it, set an operator key in
+  ``/SETTINGS/online.ini``: ``[web]`` ``operator_key=<something>``. The page
+  then asks for it before every change.
+
+**By hand**, as before:
 
 1. Plug a stick into the port you want for player 1, start one of Prime,
    Prime 2, XX or Phoenix, then read ``/SETTINGS/piu_server.log``
