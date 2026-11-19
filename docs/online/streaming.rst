@@ -28,12 +28,13 @@ address of the Profile manager (the F8 QR code) followed by:
   combination), ``&scale=1.5`` (bigger text), ``&bg=dark`` (a background).
 
 ``/live/pads.html``
-  The two pads only: a panel is filled while it is pressed and glows while
-  its light is on. This replaces the old broadcaster (``broadcaster.py`` and
-  its port): there is nothing to install.
-
-``/live/pads.html?control=1``
-  The same page with **pressing**, for the operator (see below).
+  The two pads as the old broadcaster (``broadcaster.py``) drew them, with
+  nothing to install: the colour of a panel is its **light**, the four thin
+  bars around it are its four **sensors** (left, top, right, bottom; white
+  while pressed), a white outline means the panel is pressed, and a row shows
+  the cabinet lamps L2S, L1N, NEON, L1S and L2N and the game's name. When
+  pressing is on, a *Take control* button lets the operator press (see below).
+  For OBS use ``/live/overlay.html?show=pads``, which never presses.
 
 ``/api/live`` and ``/api/live/stream``
   The same data as JSON, and as a live stream (Server-Sent Events), for
@@ -68,14 +69,18 @@ Pressing from the page (operator)
 
 Like the old broadcaster, the pads page can also press: the panels of both
 pads (click, or touch with several fingers at once; a panel stays down while
-it is held), the keys **Q E S Z C** (player 1) and **R Y G V N** (player 2) of
-the PC's keyboard, and the buttons SERVICE, TEST, COIN1, COIN2 and CLEAR
-(keys 1 to 5).
+it is held), a single sensor by its bar, and the buttons SERVICE, TEST, COIN1,
+COIN2 and CLEAR. With keyboard input turned on for the cabinet
+(``/SETTINGS/.keyboard``), also the keys **Q E S Z C** (player 1) and
+**R Y G V N** (player 2) of the PC's keyboard and 1 to 5 for the buttons.
+Pressing a single sensor needs a system version from 2026-11-19 on; older ones
+press the whole panel only.
 
 This controls the machine, so it is separate from the streaming switch and
 off by default: set ``press=1`` **and** an operator key ``press_key=...`` in
 the ``[stream]`` section (:ref:`online_stream_ini_section`). Open
-``/live/pads.html?control=1``, type the key and press *Take control*.
+``/live/pads.html``, press *Take control* and type the key. The page shows
+*IN CONTROL* with a gold frame while it has control.
 
 - Only one device at a time has control. Another one is refused until the
   first gives it back or goes silent.
