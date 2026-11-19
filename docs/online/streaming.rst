@@ -46,7 +46,13 @@ What is shown
 with its banner, artist and chart (single or double and the level). For
 NX2 up to Phoenix. During the song select the song under the cursor is shown
 where the game lets it be seen. UCS charts of XX and Phoenix show the file
-name. PMod is not covered.
+name. Exceed, Exceed 2 and PMod show the song too (PMod: no banner).
+
+**Score while playing and at the end of each song**, for the games that do
+not use the network: NX2, NXA, Fiesta, Fiesta EX and Fiesta 2 (with or
+without a USB stick), Exceed and Exceed 2, and PMod. At the end of every
+song the page lists the player's score, grade, judgements and max combo
+(a stage break shows as FAILED); while the song plays, the running score.
 
 **Online match** (XX and Phoenix): both players (the one on this machine and
 the opponent on the other machine), the chart both play, the live combo or
