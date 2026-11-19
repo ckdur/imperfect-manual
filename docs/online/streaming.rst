@@ -46,11 +46,11 @@ What is shown
 with its banner, artist and chart (single or double and the level). For
 NX2 up to Phoenix. During the song select the song under the cursor is shown
 where the game lets it be seen. UCS charts of XX and Phoenix show the file
-name. Exceed, Exceed 2, PMod and the CD-era games from 3rd O.B.G to
+name. Zero, NX, Exceed, Exceed 2, PMod and the CD-era games from 3rd O.B.G to
 Premiere 3 / Prex 3 show the song too (no banner; not 1st and 2nd).
 
 **Score while playing and at the end of each song**, for the games that do
-not use the network: NX2, NXA, Fiesta, Fiesta EX and Fiesta 2 (with or
+not use the network: Zero, NX, NX2, NXA, Fiesta, Fiesta EX and Fiesta 2 (with or
 without a USB stick), Exceed and Exceed 2, PMod, and the CD-era games from
 3rd O.B.G to Premiere 3 / Prex 3 (their score only). At the end of every
 song the page lists the player's score, grade, judgements and max combo
