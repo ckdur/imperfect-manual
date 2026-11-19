@@ -144,3 +144,30 @@ Settings of the :ref:`Profile manager <online_web_section>`.
 
 The page shows nothing without a valid license, and the page of a game only
 when that game is installed.
+
+.. _online_stream_ini_section:
+
+The ``[stream]`` section
+------------------------
+
+Settings of the :ref:`live pages for streamers <online_streaming_section>`.
+They are read at every request: no restart is needed.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 18 14 68
+
+   * - Key
+     - Default
+     - Meaning
+   * - ``enabled``
+     - ``0``
+     - ``1`` turns the live pages on. Off, they answer "live pages are off on
+       this machine" and the Profile manager is not affected.
+   * - ``names``
+     - ``1``
+     - ``0`` hides the names of the players: this machine's and the online
+       opponent's.
+   * - ``pads``
+     - ``1``
+     - ``0`` hides the pad presses and the lights.

@@ -1,0 +1,65 @@
+.. _online_streaming_section:
+
+Live pages for streamers
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The cabinet can show, on its own web page, what is being played right now:
+the game, the song and chart, the players, the score of the last songs, the
+**scores of an online match on both machines** and the **pad presses** with
+the lights. The pages update by themselves and are made to be put on a stream
+as a browser source (OBS and similar programs).
+
+They are **off** until the operator turns them on: ``enabled=1`` in the
+``[stream]`` section of ``/SETTINGS/online.ini``
+(:ref:`online_stream_ini_section`).
+
+The pages
+---------
+
+Open them from a PC or phone on the same network as the cabinet, at the
+address of the Profile manager (the F8 QR code) followed by:
+
+``/live/``
+  Everything on one page.
+
+``/live/overlay.html``
+  The same with a transparent background, for a browser source. Options in
+  the address: ``?show=song,match,scores,pads`` (what to draw, in any
+  combination), ``&scale=1.5`` (bigger text), ``&bg=dark`` (a background).
+
+``/live/pads.html``
+  The two pads only: a panel is filled while it is pressed and glows while
+  its light is on. This replaces the old broadcaster (``broadcaster.py`` and
+  its port): there is nothing to install, and nothing can be pressed from the
+  page.
+
+``/api/live`` and ``/api/live/stream``
+  The same data as JSON, and as a live stream (Server-Sent Events), for
+  your own overlays.
+
+What is shown
+-------------
+
+**Game** and **song**: the game that runs, and the song as it is loaded,
+with its banner, artist and chart (single or double and the level). For
+NX2 up to Phoenix. During the song select the song under the cursor is shown
+where the game lets it be seen. UCS charts of XX and Phoenix show the file
+name. PMod is not covered.
+
+**Online match** (XX and Phoenix): both players (the one on this machine and
+the opponent on the other machine), the chart both play, the live combo or
+miss counter of each side while they play, and both results at the end, with
+the winner.
+
+**Players and scores** of the network games (Prime to Phoenix): the names that
+logged in and the last scores.
+
+What is public
+--------------
+
+With ``enabled=1`` **anyone on the network of the cabinet** can open these
+pages, like the Profile manager. They show player names, including the name of
+an online opponent from another place (the same name the cabinet shows on its
+screen during the match). Use ``names=0`` to hide the names and ``pads=0``
+to hide the pads. Nothing of this leaves the cabinet: the pages are served by
+the cabinet itself, never by a server on the internet.
