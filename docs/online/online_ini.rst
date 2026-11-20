@@ -124,7 +124,9 @@ Settings of the :ref:`Profile manager <online_web_section>`.
    * - ``qr_side``
      - ``right``
      - ``left`` or ``right``: the side bar of the picture in which the code
-       is drawn.
+       is drawn. While the players' names are in the side bars (games up to
+       NX) the code is always at the bottom of the right bar
+       (:ref:`online_side_names_section`).
    * - ``qr_size``
      - ``0.33``
      - Height of the code as a fraction of the screen height (``0.1`` to

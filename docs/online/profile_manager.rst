@@ -14,7 +14,10 @@ Opening it
 1. Press **F8** on a keyboard plugged into the cabinet, in the menu or in any
    game.
 2. A QR code labelled *Profile manager* appears in the side bar of the picture
-   for 10 seconds (pressing F8 again restarts the time).
+   for 10 seconds (pressing F8 again restarts the time). In the games up to NX,
+   while the players' names are in the side bars, it appears at the bottom of
+   the right bar instead, under the P2 name
+   (:ref:`online_side_names_section`).
 3. Scan it with a phone that is on **the same network as the cabinet**.
 
 .. image:: ../img/profile_manager_qr.png
@@ -206,6 +209,13 @@ Nothing is shown when the game covers the whole screen (a 4:3 monitor, or a
 game that switched the screen to 640x480) and in NX2 and later games, which
 show their own profiles. ``side_names=0`` in :ref:`online_web_ini_section`
 turns the names off.
+
+While the names are shown, the F8 QR code moves to the bottom of the right
+bar, under the P2 name, so it covers neither the name nor the game: at
+1280x720 it is 160 pixels wide (4 pixels per module), a little smaller than
+usual, so hold the phone closer. On a screen whose bar is too narrow for it
+(a long address on a 16:10 screen) it goes to the lower-right corner at its
+normal size and covers the right edge of the game picture while it is shown.
 
 .. _online_web_cards_section:
 
