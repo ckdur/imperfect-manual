@@ -138,6 +138,26 @@ What each game offers
   the machine (the names come from the game itself). The format is described
   in ``elfloader/server/piuweb/DESIGN.md``, "Internet ranking codes".
 
+**1st to Exceed 2**
+  The older games (1st, 2nd, O.B.G. to PREX 3, Exceed, Exceed 2) keep no
+  save and show no code. While one of them runs on this cabinet, the cabinet
+  records **each stage when the evaluation screen comes**: song, chart and
+  level, score, the judgments and max combo, the grade where the game has
+  one (Exceed, Exceed 2; the 1st to PREX 3 ports report none), the stage
+  number and a stage break. The game then appears on your profile with
+  *Profile*, *Records* (your best score per song and chart) and *Plays*
+  (every stage, newest first).
+
+  - A play goes to the profile **your side plays with now**: the machine's
+    profile of that side, or your USB stick once you plug it into that side's
+    port, or your AM.PASS card once you tap it on that side's reader. **F9**
+    (P1) and **F10** (P2) on the keyboard put the side back on the machine's
+    profile.
+  - Not recorded: the demo (attract) play, a stage nobody played, and a stage
+    played (even partly) with **Autoplay** from the live pages
+    (:ref:`online_streaming_section`).
+  - One stage is one play: nothing is counted twice.
+
 Song names and banners are read from the game's own data on the machine when
 the page is shown; nothing of the games is on the page's server or in this
 manual. The first time after an update, a game's list is built in the
