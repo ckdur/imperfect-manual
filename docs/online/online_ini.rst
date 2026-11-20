@@ -30,6 +30,7 @@ yours from then on. Changes are picked up the next time a game starts.
    qr_side=right
    qr_size=0.33
    url=
+   side_names=1
 
 The ``[online]`` section
 ------------------------
@@ -134,6 +135,10 @@ Settings of the :ref:`Profile manager <online_web_section>`.
      - The address the code stands for. Empty: ``http://<address of the
        cabinet>:<port>/``. Set it only if phones reach the cabinet under
        another name or address.
+   * - ``side_names``
+     - ``1``
+     - ``0`` turns off the players' profile names in the side bars of the
+       games up to NX (:ref:`online_side_names_section`).
    * - ``operator_key``
      - empty
      - The key the :ref:`USB ports page <online_usb_ports_section>` asks

@@ -176,6 +176,37 @@ is installed.
 .. image:: ../img/profile_manager_nolicense.png
    :width: 40%
 
+.. _online_side_names_section:
+
+Names in the side bars (1st to NX)
+----------------------------------
+
+The games up to NX (1st, 2nd, O.B.G. to PREX 3, Exceed, Exceed 2, Zero, NX)
+show a 4:3 picture in the middle of a wide screen, with black bars left and
+right. While one of them runs, the cabinet writes the players' profile names
+in those bars: **P1 in the left bar, P2 in the right one**, in the menu's
+font, with ``USB`` or ``AM.PASS`` under the name when the profile is a stick
+or a card. Nothing is drawn over the game picture and the game runs exactly as
+fast as without the names.
+
+Which profile a side shows:
+
+- the machine's own P1 / P2 profile, when nothing else is in;
+- your USB stick, once you plug it into that side's port
+  (:ref:`online_usb_ports_section`); pulling it out puts the side back on the
+  machine's profile;
+- your AM.PASS card, once you tap it on that side's reader;
+- **F9** (P1) and **F10** (P2) on the keyboard put that side back on the
+  machine's profile (a stick still plugged in is ignored until you plug it in
+  again).
+
+The names change as soon as a stick or card comes or goes, or a name is
+edited on the page. A long name is made smaller, then cut with ``...``.
+Nothing is shown when the game covers the whole screen (a 4:3 monitor, or a
+game that switched the screen to 640x480) and in NX2 and later games, which
+show their own profiles. ``side_names=0`` in :ref:`online_web_ini_section`
+turns the names off.
+
 .. _online_web_cards_section:
 
 Card profiles
