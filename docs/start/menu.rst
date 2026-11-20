@@ -144,6 +144,25 @@ Below is a detailed explanation of each settings option:
 
   Adjust as needed if a game's timing is not accurate enough.
 
+- **Menu Language**
+
+  Sets the language of the loader menu **and** of the :ref:`Profile manager
+  <online_web_section>` web page. Pick one from the submenu, the way you pick a
+  volume level:
+
+  - **English** (the default and fallback)
+  - **한국어 (Korean)**
+  - **中文 (Chinese)**
+  - **Español (Spanish)**
+  - **Português (Portuguese)**
+
+  These are the languages Pump It Up Phoenix offers for its regions. The choice
+  is saved on the writable ``SETTINGS`` partition, so it survives updates and
+  does not affect the signed system files. When a piece of text has not been
+  translated yet, it is shown in English. The Profile manager opens in the same
+  language the menu is set to; each phone or browser can still switch to another
+  language for itself (see :ref:`online_web_section`).
+
 - **Operating System Swap**
 
   Switches between different OS versions for better compatibility with specific
