@@ -101,9 +101,9 @@ pressing (``press=1`` and ``press_key=...``): type the key and press
 players.
 
 - **Games**: the CD-era games from O.B.G. to Premiere 3 / Prex 3, Exceed,
-  Exceed 2, Zero, NX, NX2, NXA, Fiesta, Fiesta EX, Fiesta 2, Prime, Prime 2
-  and XX. Not 1st and 2nd, Infinity, Phoenix or PMod: the button does not show
-  there.
+  Exceed 2, Zero, NX, NX2, NXA, Fiesta, Fiesta EX, Fiesta 2, Prime, Prime 2,
+  XX and Phoenix 2.12 / 2.13 (other Phoenix versions: no button). Not 1st and
+  2nd, Infinity or PMod: the button does not show there.
 - It stays on only **while the page that turned it on stays open**: closing
   that page (or losing its connection for a few seconds) turns it off, and so
   does leaving the game or starting another one. Any device with the key can
