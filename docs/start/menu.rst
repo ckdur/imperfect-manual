@@ -155,8 +155,10 @@ Below is a detailed explanation of each settings option:
   - **中文 (Chinese)**
   - **Español (Spanish)**
   - **Português (Portuguese)**
+  - **日本語 (Japanese)**
 
-  These are the languages Pump It Up Phoenix offers for its regions. The choice
+  These are the languages Pump It Up Phoenix offers for its regions, plus
+  Japanese. The choice
   is saved on the writable ``SETTINGS`` partition, so it survives updates and
   does not affect the signed system files. When a piece of text has not been
   translated yet, it is shown in English. The Profile manager opens in the same

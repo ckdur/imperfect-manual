@@ -39,9 +39,9 @@ Language
 
 The page opens in the **same language the cabinet menu is set to** (the
 **Menu Language** setting, see :ref:`settings_section`). Phoenix's region
-languages are offered: English, Korean (한국어), Chinese (中文),
-Spanish (Español) and Portuguese (Português), with English as the fallback for
-any text not translated yet.
+languages are offered, plus Japanese: English, Korean (한국어), Chinese (中文),
+Spanish (Español), Portuguese (Português) and Japanese (日本語), with English as
+the fallback for any text not translated yet.
 
 A **language selector** in the top bar lets each phone or browser pick its own
 language, without changing the cabinet or anyone else's device. That choice is
