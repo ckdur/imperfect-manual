@@ -143,8 +143,8 @@ What each game offers
   save and show no code. While one of them runs on this cabinet, the cabinet
   records **each stage when the evaluation screen comes**: song, chart and
   level, score, the judgments and max combo, the grade where the game has
-  one (Exceed, Exceed 2; the 1st to PREX 3 ports report none), the stage
-  number and a stage break. The game then appears on your profile with
+  one (Exceed, Exceed 2; the 1st to PREX 3 ports report none) and the stage
+  number. A stage break counts as a play too. The game then appears on your profile with
   *Profile*, *Records* (your best score per song and chart) and *Plays*
   (every stage, newest first).
 
