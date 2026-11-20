@@ -251,6 +251,78 @@ usual, so hold the phone closer. On a screen whose bar is too narrow for it
 (a long address on a 16:10 screen) it goes to the lower-right corner at its
 normal size and covers the right edge of the game picture while it is shown.
 
+.. _online_web_pmod_section:
+
+PMod songs
+----------
+
+The **PMod songs** page (``http://<cabinet>:8080/pmod/``, the *PMod songs*
+button of the home page) manages the songs you added to PMod, like the
+:doc:`USB importer <../importer/pmod>` but from a phone or a computer on the
+cabinet's network. It shows **names only**: no banners, no previews, no
+music, and no chart editor.
+
+On the GAME partition the songs are in ``PMOD/songs`` and the packages in
+``PMOD/songs_pkg`` (PMod sees them as ``Songs`` and ``SongPackages``):
+
+- A **channel** is a song group, a folder ``PMOD/songs/<channel>/``. The page
+  lists every channel with its songs and whether it has a **banner**.
+- A **song** is a folder ``PMOD/songs/<channel>/<song>/`` with its chart
+  (``.ssc``, ``.sm``, ``.sma``, ``.ksf``, ``.pmod``, ...) and the files the
+  chart names.
+- A **song package** is a ``.zip`` in ``PMOD/songs_pkg`` that PMod reads as
+  it is; inside, channel folders holding song folders
+  (``<channel>/<song>/<files>``).
+
+What you can do:
+
+1. **Create a channel**: type a name and press *Create channel*. It makes an
+   empty folder. Names may not contain ``< > : " / \ | ? *``, start with a
+   dot, or repeat another channel's name (upper or lower case alike).
+2. **Upload a song** into a channel: a ``.zip`` holding the song's folder (or
+   the song's files, then the folder is named after the zip).
+3. **Upload a pack of songs** into a channel: a ``.zip`` holding song
+   folders (or one folder of song folders, like a stick's
+   ``Songs/<group>/``). A picture next to the song folders becomes the
+   channel's banner when the channel has none.
+4. **Banner**: add, replace or remove the channel's banner (PNG, JPEG, GIF
+   or BMP, at most 4 MB and 4096 pixels a side). PMod uses the picture in
+   the channel folder; the page keeps just one.
+5. **Delete** a song, a whole channel (with all its songs) or a song
+   package. Each asks for confirmation first; it cannot be undone.
+6. **Upload a song package**: the ``.zip`` is kept as it is in
+   ``PMOD/songs_pkg``.
+
+Before anything is written, the cabinet checks the zip and installs
+**nothing** when something is wrong, listing what:
+
+- every song folder has a chart PMod can load;
+- every file the chart names (``#MUSIC``, ``#BANNER``, ``#BACKGROUND``,
+  ``#CDTITLE``, ``#JACKET``, ``#PREVIEW``, ``#LYRICSPATH``, ...) is in the zip
+  (upper or lower case does not matter, as in PMod); a chart without
+  ``#MUSIC`` needs an audio file in its folder;
+- the zip has no tricks: no absolute paths, no ``..``, no links, no
+  encrypted files, no names the disk cannot hold, no song name the channel
+  already has;
+- it fits: at most 1024 MB per upload, 20000 files per zip and the free
+  space of GAME (``pmod_upload_mb``, ``pmod_max_files``,
+  ``pmod_unpacked_mb`` in :ref:`online_web_ini_section`).
+
+Background changes the chart names but the zip lacks only give a note
+(PMod also looks for them in its own backgrounds). The page shows the
+progress of the upload, then the result.
+
+.. important::
+   - Every change needs the **operator key**, ``operator_key=`` in the
+     ``[web]`` section of :ref:`online_web_ini_section`. Without one set, the
+     page only lists the songs.
+   - Changes are refused **while a game runs** (PMod or any other): use the
+     page while the machine is in the menu.
+   - The GAME partition stays read-only; the cabinet makes it writable only
+     for the moment of the change and read-only again right after, also when
+     the change fails.
+   - New songs appear the next time PMod starts.
+
 .. _online_web_cards_section:
 
 Card profiles

@@ -114,6 +114,14 @@ The importer will provide options:
 - After completion, the system will **automatically reboot**.
 - Newly imported songs and packages will be available in the **PMOD song wheel**.
 
+From the profile manager
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Songs, packs, song packages and channel banners can also be added and
+deleted from a phone, without a USB stick, on the **PMod songs** page of the
+profile manager (:ref:`online_web_pmod_section`). It checks every upload
+before installing it.
+
 Additional Notes
 ^^^^^^^^^^^^^^^^
 

@@ -145,7 +145,18 @@ Settings of the :ref:`Profile manager <online_web_section>`.
      - empty
      - The key the :ref:`USB ports page <online_usb_ports_section>` asks
        for before it changes ``[usb] p1=`` / ``p2=``. Empty: anybody who
-       can open the page may change them.
+       can open the page may change them. The
+       :ref:`PMod songs page <online_web_pmod_section>` needs it for every
+       change; empty, that page only lists the songs.
+   * - ``pmod_upload_mb``
+     - ``1024``
+     - Largest upload (MB) of the :ref:`PMod songs page <online_web_pmod_section>`.
+   * - ``pmod_max_files``
+     - ``20000``
+     - Most files one uploaded zip may hold.
+   * - ``pmod_unpacked_mb``
+     - ``4096``
+     - Most MB one uploaded zip may unpack to.
 
 .. warning::
 
