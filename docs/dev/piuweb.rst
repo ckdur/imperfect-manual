@@ -6,7 +6,7 @@ The profile manager (piuweb)
 How the :ref:`Profile manager <online_web_section>` is built. The source of
 truth is the repository: ``elfloader/server/piuweb/DESIGN.md`` (the contract
 between the parts) and ``README.md``; the save layouts are in
-``cpio_trap/menugl/usbprofile/FORMATS.md`` ("NX2/NXA body", "Fiesta family
+``menugl/usbprofile/FORMATS.md`` ("NX2/NXA body", "Fiesta family
 body", "Machine unlocks") and the song data in
 ``elfloader/server/piuweb/songs/FORMATS.md``.
 
@@ -15,7 +15,7 @@ The daemon
 
 ``elfloader/server/piu_web.py`` is a Python 3 standard-library HTTP daemon
 serving a plain HTML/CSS/JS site and a JSON API. The menu starts it at every
-menu start (``piuweb_start`` in ``cpio_trap/menugl/main.c``), but only from a
+menu start (``piuweb_start`` in ``menugl/main.c``), but only from a
 disk whose system manifest checked out (see :ref:`security_section`). It
 detaches, keeps a lock so there is a single instance, and serves from boot
 to power-off: it is not part of any game's process group, so game launches
@@ -60,7 +60,7 @@ byte-identical; this is tested. Prices and item lists are ids and numbers only.
 A change is validated against the save with the pending changes already
 applied, then stored in ``ntdec/pending/<game>.json`` on the stick. It is
 applied when no game using that save runs, when the game exits, or just
-before the game loads: the ``savegen`` hook (``cpio_trap/menugl/savegen.c``)
+before the game loads: the ``savegen`` hook (``menugl/savegen.c``)
 asks the daemon on a local unix socket and waits a few seconds at most, then
 goes on whatever the answer. The changes are checked again at that moment.
 The previous files go to ``ntdec/backup/``. Newer games change ``profile.ini``
@@ -97,11 +97,11 @@ Infinity
 Infinity (a StepMania 5 game) finds sticks on its own: it lists
 ``/sys/block``, reads ``/etc/fstab`` for a mount point, runs ``mount`` itself
 and gives player 1 the first stick on an even USB port, player 2 the first on
-an odd one. ``cpio_trap/menugl/infusb.c`` (preloaded by ``infinity.sh``
+an odd one. ``menugl/infusb.c`` (preloaded by ``infinity.sh``
 only, shipped inside the Infinity package) shows it two stand-in disks for
 the sticks of the cabinet's port rule, does the mount and creates
 ``Pump It Up Infinity/Editable.ini`` from ``profile.ini``
-(``cpio_trap/menugl/usbprofile/INFINITY_USB.md``). The page reads
+(``menugl/usbprofile/INFINITY_USB.md``). The page reads
 ``Stats.xml`` (signed by the game, so never written) with
 ``elfloader/server/piuweb/infinity.py``; the Mission Zone list is
 ``piuweb/missions_infinity.json``, from the theme's ``Mission.lua``.
@@ -121,7 +121,7 @@ Titles without a rule cannot be earned until a rule is added.
 The QR overlay
 ^^^^^^^^^^^^^^
 
-``cpio_trap/menugl/qroverlay/`` is a small 32-bit C program started by the
+``menugl/qroverlay/`` is a small 32-bit C program started by the
 menu once per boot. It watches the keyboards for ``qr_key`` without
 grabbing them, reads the address the daemon publishes, and draws the QR
 code in an X window above the running game for ``qr_seconds``. See its
