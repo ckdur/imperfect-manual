@@ -59,6 +59,14 @@ You can navigate the menu using the standard Pump It Up cabinet controls:
 
 .. note::
 
+   Holding **TEST** for 5 seconds **inside a game** normally quits the game
+   and brings you back to this menu. On the menu itself, holding TEST does
+   nothing: it never closes, restarts or shuts down the menu. To restart or
+   power off the machine, use the **Restart/PowerOff** entry of the
+   :ref:`Settings menu <settings_section>`.
+
+.. note::
+
    Navigation can be done also with the FX BUTTON IO, or the front buttons of 
    LXIO. The navigation is parallel, meaning that you can use the same buttons
    for navigating the menu.
