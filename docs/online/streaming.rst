@@ -87,7 +87,33 @@ the ``[stream]`` section (:ref:`online_stream_ini_section`). Open
 - Nothing stays pressed: everything is let go when the page loses focus, is
   hidden or closed, or when the machine hears nothing from it for 1.5
   seconds (for example a lost Wi-Fi connection).
-- The live pages and the OBS overlay never press.
+- The live pages and the OBS overlay never press (``/live/`` can only switch
+  autoplay, see below).
+
+Autoplay from the page (operator)
+---------------------------------
+
+Autoplay is switched from the live pages, not from the menu: ``/live/`` and
+``/live/pads.html`` show an **Autoplay** button while the running game has an
+autoplay the machine can switch. It needs the same settings and key as
+pressing (``press=1`` and ``press_key=...``): type the key and press
+*Autoplay: OFF (turn on)*. The game then plays the steps by itself, for both
+players.
+
+- **Games**: the CD-era games from O.B.G. to Premiere 3 / Prex 3, Exceed,
+  Exceed 2, Zero, NX, NX2, NXA, Fiesta, Fiesta EX, Fiesta 2, Prime, Prime 2
+  and XX. Not 1st and 2nd, Infinity, Phoenix or PMod: the button does not show
+  there.
+- It stays on only **while the page that turned it on stays open**: closing
+  that page (or losing its connection for a few seconds) turns it off, and so
+  does leaving the game or starting another one. Any device with the key can
+  turn it off.
+- While it is on, every live page and the OBS overlay show **AUTOPLAY**, and
+  the scores of songs played with autoplay are marked **AUTO**, so a stream
+  never shows them as a real play.
+- The game still keeps those scores as usual (in the player's save or
+  profile): the mark is only on the live pages.
+- It needs a system version from 2026-11-20 on.
 
 What is public
 --------------
