@@ -32,12 +32,18 @@ for the selected game.
    The importer may not detect the games right away. You can retry as many times
    as you want stepping in the "center" button. To abort, just step on "red".
 
-.. warning::
+The Importer runs in its own full-screen console: white text on black, with
+an empty border around it, the same on every monitor or TV. The text always
+fills 30 lines of the screen height, so it is as readable on a 4K monitor as on
+an old 4:3 TV (where the lines are 80 characters wide; on a 16:9 screen they
+are 106). Nothing is ever written up to the edge of the screen.
 
-   Sometimes the importer screen appears small. This is due to the monitor/TV
-   you attached. Unfortunately, the detection of the DPI is not complete in the
-   original OS. If there is a fix for this, it will be fixed as soon as
-   possible.
+.. image:: ../img/importer_console.png
+   :alt: The Importer console at 1280x720, at the end of a transfer
+
+The Importer reads the pads (and the keyboard keys mapped to them) itself:
+center step to continue, red keys to cancel, and the same arrows that move
+through the menu list to choose among numbered options.
 
 6. **Insert the required disk or dongle.**
 
