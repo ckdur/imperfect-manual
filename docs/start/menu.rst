@@ -17,12 +17,19 @@ any input.
 
 To proceed:
 
-- **Press the CENTER button** to agree and continue to the main menu.
+- **Press the CENTER button** to agree and continue to the main menu. The
+  **SERVICE** button inside the machine does the same.
 - If you do not agree with the disclaimer, **turn off the machine** immediately
   to exit.
 
 This step ensures users understand that *Imperfect Collection* is an archival
 and preservation project, not an officially endorsed or licensed product.
+
+.. note::
+
+   When the machine is turned on, the screen stays black for **3 seconds**
+   before the disclaimer starts. This gives a TV or monitor the time to finish
+   its own resolution-change animation.
 
 Game List Menu
 ^^^^^^^^^^^^^^
@@ -87,6 +94,12 @@ Menu changes in 2.0.0
 - The menu is **animated**.
 - An **About** screen was added.
 - Holding **TEST** no longer breaks the menu.
+- A game left by holding **TEST** no longer lands in the Settings menu while
+  the button is still down.
+- The Settings menu can be used with the **TEST**, **SERVICE** and **CLEAR**
+  buttons alone.
+- The menu music does not repeat a track until all of them were played, and
+  every boot starts with the same one.
 - **Boot last game** no longer relaunches a game that you quit on purpose.
 - The **Power off** entry works again.
 - The screen is detected correctly when the machine has several outputs
@@ -107,11 +120,21 @@ Accessing the Settings Menu
 
 To access the Settings menu:
 
-1. Press the **Service button** located inside your MK machine. This button is typically used for system-level configuration and maintenance tasks.
+1. Press the **TEST button** located inside your MK machine. This button is typically used for system-level configuration and maintenance tasks.
 2. To exit the Settings menu, either:
 
    - Select **Save and Exit** from the menu, or  
-   - Press the **Service button** again.
+   - Press the **CLEAR button** while the list of settings is shown.
+
+Inside the Settings menu the three buttons of the machine work like in the
+operator menu of a game, so no pad is needed:
+
+- **TEST** moves the selection down (after the last entry it returns to the
+  first).
+- **SERVICE** enters the selected entry, or confirms the selected value.
+- **CLEAR** goes back.
+
+The pads keep working as in the game list.
 
 Available Settings Options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
