@@ -183,8 +183,10 @@ Below is a detailed explanation of each settings option:
   These are the languages Pump It Up Phoenix offers for its regions, plus
   Japanese. The choice
   is saved on the writable ``SETTINGS`` partition, so it survives updates and
-  does not affect the signed system files. When a piece of text has not been
-  translated yet, it is shown in English. The Profile manager opens in the same
+  does not affect the signed system files. The change applies at once, without
+  restarting the menu. The settings menu, its help lines and the main status
+  messages are translated; when a piece of text has not been translated yet
+  (for example the description of each game), it is shown in English. The Profile manager opens in the same
   language the menu is set to; each phone or browser can still switch to another
   language for itself (see :ref:`online_web_section`).
 
