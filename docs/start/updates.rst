@@ -41,6 +41,20 @@ Updating Procedure
    - The USB stick format is FAT32
    - The file is located in the **root directory**, not inside a folder
 
+Updating at power-on (no menu needed)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You do not have to reach the menu. If the stick is in the machine when it is
+switched on, the loader looks at it before the menu starts. When the package
+is **signed and for a newer release than the one installed**, the screen shows
+**Update in progress** with a progress bar, and the machine restarts by itself
+when it is done. Do not turn it off.
+
+- A package for the same or an older release is ignored here (it never
+  repeats after the update; the menu's *USB Update* still works for it).
+- If the update fails, the screen says so for a few seconds and the machine
+  starts the version that was already installed.
+
 After updating, your loader will reboot if necessary and incorporate the new 
 system changes automatically.
 
