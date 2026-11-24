@@ -1,2 +1,14 @@
 Prex 3
 ~~~~~~
+
+MK3 and MK5 versions
+--------------------
+
+Prex 3 has two versions, chosen with the menu's region selector: **MK3
+version** (the default, the original executable) and **MK5 version** (a
+source port of the MK5 release, run through SDL2). The importer stores both
+executables in the package when the build has the MK5 one, so the choice is
+made at launch time and the menu remembers the last one used. The MK5 version
+keeps its own saves (``/SAVE/850/mk5``), separate from the MK3 ones. The
+disc is the same one the MK3 version uses. If a package has no MK5
+executable, choosing **MK5 version** starts the MK3 version.

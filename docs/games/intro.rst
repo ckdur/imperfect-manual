@@ -24,6 +24,9 @@ them:
   (first start, an invalid settings file, or DEFAULT SETTING in the game's
   test menu): a machine that already has settings for a game keeps its value.
   To change it there, set DEMO SOUND to ON in that game's test menu.
+- **MK3 and MK5 versions of Prex 3.** The region selector of Prex 3 offers
+  **MK3 version** (default) and **MK5 version** (source port); see
+  :doc:`850`. The Premiere 3 MK5 port is not available yet.
 
 .. toctree::
    :maxdepth: 2
