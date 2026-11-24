@@ -239,6 +239,22 @@ Below is a detailed explanation of each settings option:
   for switching back to an original game disk without physically reconfiguring 
   hardware connections.
 
+- **Check File Systems**
+
+  Checks the disk for errors, for example after power cuts. Upon confirming,
+  the machine restarts and, before the menu comes back, checks the
+  **SETTINGS** partition (license, credits, saves and profiles), the **BOOT**
+  partition and last the **GAME** partition, repairing what it can.
+
+  - The screen shows which partition is being checked and its progress. The
+    GAME check is the long one: on a large disk it can take from several
+    minutes to an hour. **Leave the machine on.**
+  - If the power goes off during a check, it starts again on the next boot
+    (at most three times for each step, then it is skipped).
+  - The machine always starts normally afterwards, even if errors were found.
+    The result is written to ``fsck.log`` on the SETTINGS partition, and its
+    summary is shown in **System Information** (*Disk Check*).
+
 - **Restart/PowerOff**
 
   - **Shut it down completely** the system in the case of regular PCs.
