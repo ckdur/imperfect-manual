@@ -37,6 +37,7 @@ This chapter is split so that you can go straight to what you need:
    matching
    profile_manager
    streaming
+   settings_page
 
 .. toctree::
    :maxdepth: 2
