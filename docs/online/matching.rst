@@ -31,6 +31,23 @@ its own score in its player's profile.
 
 To leave the search, press an upper arrow.
 
+What happens without a connection
+---------------------------------
+
+A machine that cannot reach the match service keeps working exactly the same,
+**minus matching against other places**: the profiles never leave the machine
+or the USB stick, and nothing is lost. Because a mode that cannot find anybody
+would only confuse the player, the machine **hides the ONLINE MATCHING channel
+while it has nobody to play against**. It shows the channel only while it
+reaches the match service, or while another *Imperfect Collection* machine is
+connected to the same game server (see "Playing between your own machines").
+It hides it again as soon as that stops being true, for example when the cable
+is pulled. If the connection is lost **during** a match, the game is told that
+the opponent left.
+
+A machine alone and offline therefore never offers online matching: that is
+normal, not a fault.
+
 If the ONLINE MATCHING channel is missing
 -----------------------------------------
 

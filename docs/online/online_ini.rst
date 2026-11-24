@@ -185,8 +185,8 @@ They are read at every request: no restart is needed.
      - Default
      - Meaning
    * - ``enabled``
-     - ``0``
-     - ``1`` turns the live pages on. Off, they answer "live pages are off on
+     - ``1``
+     - ``0`` turns the live pages off (they are on by default). Off, they answer "live pages are off on
        this machine" and the Profile manager is not affected.
    * - ``names``
      - ``1``

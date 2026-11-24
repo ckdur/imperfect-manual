@@ -9,9 +9,10 @@ the game, the song and chart, the players, the score of the last songs, the
 the lights. The pages update by themselves and are made to be put on a stream
 as a browser source (OBS and similar programs).
 
-They are **off** until the operator turns them on: ``enabled=1`` in the
-``[stream]`` section of ``/SETTINGS/online.ini``
-(:ref:`online_stream_ini_section`).
+They are **on by default** (since system version 2.0.0): the operator turns
+them off with ``enabled=0`` in the ``[stream]`` section of
+``/SETTINGS/online.ini`` (:ref:`online_stream_ini_section`). A machine whose
+``online.ini`` already says ``enabled=0`` keeps it off.
 
 The pages
 ---------
@@ -118,9 +119,9 @@ players.
 What is public
 --------------
 
-With ``enabled=1`` **anyone on the network of the cabinet** can open these
+While they are on, **anyone on the network of the cabinet** can open these
 pages, like the Profile manager. They show player names, including the name of
 an online opponent from another place (the same name the cabinet shows on its
 screen during the match). Use ``names=0`` to hide the names and ``pads=0``
-to hide the pads. Nothing of this leaves the cabinet: the pages are served by
+to hide the pads, or ``enabled=0`` to turn the pages off. Nothing of this leaves the cabinet: the pages are served by
 the cabinet itself, never by a server on the internet.
