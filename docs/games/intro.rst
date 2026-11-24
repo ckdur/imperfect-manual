@@ -17,6 +17,13 @@ them:
   online connection (XX, Prime 2, Prime and Prime Japanese Edition), with a network redirect library
   for Prime and Prime JE.
 - **Sound and video.** The games use ffmpeg 4.4.4; PMOD uses ffmpeg 8.0.
+- **Attract sound in the MK3 games (1st to Prex 3).** Their own test menu
+  option **DEMO SOUND** (music during the title, demo play and intro movie)
+  defaults to **ON**, so the attract loop is heard (most of the original games
+  default to OFF). The default applies only when a game creates or resets its settings
+  (first start, an invalid settings file, or DEFAULT SETTING in the game's
+  test menu): a machine that already has settings for a game keeps its value.
+  To change it there, set DEMO SOUND to ON in that game's test menu.
 
 .. toctree::
    :maxdepth: 2
