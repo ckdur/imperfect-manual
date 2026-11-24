@@ -29,6 +29,38 @@ Each setting says when it applies: **at once**, **at the next game start** or
 page (the file is ``/SETTINGS/settings_changes.log``: time, address of the
 device, setting, old and new value; keys are never written to it).
 
+.. _insert-profile:
+
+Profiles in the running game
+----------------------------
+
+While a game runs, the section *Profiles in the running game* puts any profile
+of the machine into it as player 1 or player 2: the two machine default
+profiles and every AM.PASS card profile (``/SETTINGS/profiles/cards/<uid>``).
+It is a control of the machine, like pressing its pads, so it is shown only
+after you unlock the page with the operator key; every **Insert as P1**,
+**Insert as P2** and **Remove** asks you to confirm first and is written to the
+change log. On the home page, a player card shows **Put into the game** when the
+running game can take that profile; it opens this section.
+
+- **NX2, NXA, Fiesta, Fiesta EX, Fiesta 2**: cards and both machine profiles,
+  on either side. The profile becomes that side's USB stick (put it in on the
+  "insert USB memory" screen); **Remove** pulls it out.
+- **Prime 2, XX, Phoenix**: cards and both machine profiles, on either side.
+  The profile is the card lying on that side's reader; **Remove** takes the
+  card off the reader, so that side no longer logs in by itself.
+- **Prime, Prime JE**: cards.
+- **Infinity**: cards; **Remove** pulls the card's stick.
+- **1st .. NX**: cards and the side's own machine profile (the profile the
+  plays are recorded in).
+- **The menu, PMod and anything else**: nothing; the page says so.
+
+A USB stick in a side's port always wins: the page refuses to put a card or a
+machine profile on that side until it is pulled out. In Prime 2, XX and
+Phoenix the stick itself can be put in for its own side. Profiles on sticks
+are not inserted on another side: the game reads a stick only on the port
+bound to a player (:ref:`online_web_ini_section`, ``[usb] p1=`` / ``p2=``).
+
 Changing the operator key
 -------------------------
 

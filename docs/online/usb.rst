@@ -90,30 +90,45 @@ for that card, which works exactly as a stick would.
   name is used.
 - **Each card is its own profile.** Cards never share a save, and a card that
   is in use on one side is refused on the other.
-- **How long it lasts.** From the tap until the game lets go of the profile:
-  in NX2 and NX Absolute that is when the title screen comes back, so the
-  next player taps a card of their own. Tapping another card on the same
-  side swaps to it. A card left lying on the reader counts as one tap.
+- **How long it lasts.** From the tap until the game ends, another card is
+  tapped on that side or the card is taken out: the whole credit is saved to
+  it. The next credit does not find it by itself: the next player taps a card
+  of their own (or the same one again). A card left lying on the reader
+  counts as one tap.
 - **Prime and Prime JE** log the card in by its number, into the same folder
   as Prime 2, XX and Phoenix. With a card reader plugged in, the default
   login (no stick, no card) waits 8 seconds for a tap instead of a few
   moments, so you have time to tap.
 
-**In the VM, or with a keyboard.** A machine run with the keyboard as its
-input (``/SETTINGS/.keyboard``, the QEMU / development way) has no card
-reader to tap. There **F9** taps the machine's default profile in for player 1
-and **F10** for player 2: in NX2, NX Absolute, Fiesta, Fiesta EX and Fiesta 2
-(and the Chinese builds) the game gets a stick whose root is
-``/SETTINGS/profiles/P1`` or ``P2`` itself, not a card folder. The same key
-again takes it off the port, so each press toggles; press it on the "insert
-USB memory" screen (on Fiesta, on the title prompt "Press green button or
-center step or connect your USB flash drive", which only appears when the first
-coin goes in at 0 credits), like a tap. A game that has already read the
-profile keeps showing it after a second press. A real stick in that port still wins. In Prime 2, XX and
-Phoenix F9 / F10 tap the emulated card of that side, and nothing logs a
-profile in by itself in this mode: only the key you press does. Machines
-without the keyboard flag are unchanged (Prime and later log the default
-profile in on their own).
+**F9 and F10, with any keyboard.** **F9** puts the machine's default profile
+in for player 1 and **F10** for player 2. They work with or without the
+keyboard flag (``/SETTINGS/.keyboard``, the QEMU / development way where the
+keyboard is the machine's pads and buttons): without it a keyboard plugged into
+a cabinet is read for these two keys only and never acts as a pad or a button,
+so the pads keep coming from the real IO board alone.
+
+- In NX2, NX Absolute, Fiesta, Fiesta EX and Fiesta 2 (and the Chinese builds)
+  the game gets a stick whose root is ``/SETTINGS/profiles/P1`` or ``P2``
+  itself, not a card folder, and the whole credit is saved there (the profile
+  manager shows that save on the machine profile's card). Press it on the
+  "insert USB memory" screen (on Fiesta, on the title prompt "Press green
+  button or center step or connect your USB flash drive", which only appears
+  when the first coin goes in at 0 credits), like a tap. Pressed again before
+  the game has read the profile, it takes it off the port; once the game has
+  read it, the key makes it ready for the next credit instead (taking it out in
+  the middle of a credit would lose that credit's save). A real stick in that
+  port still wins.
+- In Prime 2, XX and Phoenix with the keyboard flag nothing logs a profile in
+  by itself: F9 / F10 tap the emulated card of that side, and only the key you
+  press logs in.
+- In Prime 2, XX and Phoenix without the keyboard flag (a cabinet) the default
+  profile of each side logs in by itself, as if its card were left on the
+  reader. There F9 / F10 take that side's card off the reader: the side no
+  longer logs in by itself, so it can play as a guest or with another card.
+  Press the key again to put the default card back; it logs in at once.
+
+The profile manager's settings page can do the same for any profile of the
+machine, cards included (:ref:`insert-profile`).
 
 Known limit: on the Fiesta games a card may stay with its side after the
 song session, until another card is tapped there or the game exits.
