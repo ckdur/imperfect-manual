@@ -78,6 +78,13 @@ You can navigate the menu using the standard Pump It Up cabinet controls:
    LXIO. The navigation is parallel, meaning that you can use the same buttons
    for navigating the menu.
 
+.. note::
+
+   Games that offer a **region** (Fiesta EX, Fiesta 2, Prime, Prime 2, XX,
+   Phoenix, ...) remember it: the next time you open the game's panel the
+   region launched last time is already highlighted. It is stored when the
+   game starts, so backing out of the panel with **CLEAR** keeps the old one.
+
 Menu Layout Summary
 ^^^^^^^^^^^^^^^^^^^
 
