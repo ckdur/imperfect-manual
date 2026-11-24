@@ -105,8 +105,11 @@ reader to tap. There **F9** taps the machine's default profile in for player 1
 and **F10** for player 2: in NX2, NX Absolute, Fiesta, Fiesta EX and Fiesta 2
 (and the Chinese builds) the game gets a stick whose root is
 ``/SETTINGS/profiles/P1`` or ``P2`` itself, not a card folder. The same key
-again takes it out, so each press toggles; press it on the "insert USB memory"
-screen, like a tap. A real stick in that port still wins. In Prime 2, XX and
+again takes it off the port, so each press toggles; press it on the "insert
+USB memory" screen (on Fiesta, on the title prompt "Press green button or
+center step or connect your USB flash drive", which only appears when the first
+coin goes in at 0 credits), like a tap. A game that has already read the
+profile keeps showing it after a second press. A real stick in that port still wins. In Prime 2, XX and
 Phoenix F9 / F10 tap the emulated card of that side, and nothing logs a
 profile in by itself in this mode: only the key you press does. Machines
 without the keyboard flag are unchanged (Prime and later log the default
