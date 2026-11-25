@@ -64,6 +64,17 @@ running game can take that profile; it opens this section.
   plays are recorded in).
 - **The menu, PMod and anything else**: nothing; the page says so.
 
+**A side that is playing is not changed.** While a player is logged in on a
+side of the running game (Prime 2, XX, Phoenix and Prime: the game server saw
+the login; NX2 .. Fiesta 2: the side has its stick in), **Insert** on that side
+is refused ("that side holds a profile in the running game"), so a profile
+cannot be swapped under a running credit and its save lost. Use **Remove** on
+that side first: then **Insert** works on it until the next login there. The
+home page shows **IN GAME P1** / **IN GAME P2** on the profile that holds a
+side. XX does not tell the server when a player leaves, so there a side stays
+taken until the next login on it, a **Remove** or the end of the game. F9 /
+F10 at the cabinet are the player's own keys and always work.
+
 A USB stick in a side's port always wins: the page refuses to put a card or a
 machine profile on that side until it is pulled out. In Prime 2, XX and
 Phoenix the stick itself can be put in for its own side. Profiles on sticks

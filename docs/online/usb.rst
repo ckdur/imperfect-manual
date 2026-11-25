@@ -118,14 +118,32 @@ so the pads keep coming from the real IO board alone.
   read it, the key makes it ready for the next credit instead (taking it out in
   the middle of a credit would lose that credit's save). A real stick in that
   port still wins.
-- In Prime 2, XX and Phoenix with the keyboard flag nothing logs a profile in
-  by itself: F9 / F10 tap the emulated card of that side, and only the key you
-  press logs in.
-- In Prime 2, XX and Phoenix without the keyboard flag (a cabinet) the default
-  profile of each side logs in by itself, as if its card were left on the
-  reader. There F9 / F10 take that side's card off the reader: the side no
-  longer logs in by itself, so it can play as a guest or with another card.
-  Press the key again to put the default card back; it logs in at once.
+- In Prime 2, XX and Phoenix **F9 / F10 always tap the card of that side's
+  machine profile**, with or without the keyboard flag: each press logs that
+  machine profile in the next time the game asks for a card (one press per
+  second counts). With the keyboard flag nothing else logs a profile in by
+  itself; without it (a cabinet) the default profile of each side still logs
+  in by itself, as if its card were left on the reader, exactly as before.
+
+**Card readers in Prime 2, XX and Phoenix.** These games never talk to a card
+reader themselves: they talk only to the machine's reader emulation
+(``ampass.so``), which decides what each side gets. A real AM.PASS reader
+plugged into the cabinet is read by the emulation and its cards are passed on
+unchanged: **reader 1 (the lowest** ``/dev/ttyACM`` **) is player 1, reader 2
+is player 2**, and a reader plugged in or pulled out while the game runs is
+found within two seconds. The rule for each side:
+
+- every card tap, F9 / F10 press and profile-web Insert reaches the game as a
+  tap of that side, in the order they happen; **the last one wins** when the
+  game asks for a card;
+- the automatic login of the machine profile ("card left on the reader") runs
+  only while **no real reader is plugged in for that side** and the keyboard
+  flag is off. With a reader on that side, that side logs in only with a tapped
+  card or F9 / F10; pull the reader out and the automatic login comes back.
+
+``passthrough=0`` in ``[AMPASS]`` of the game's ``ampass.ini`` hands a real
+reader to the game directly instead (F9 / F10 and the automatic login then do nothing
+on that side).
 
 The profile manager's settings page can do the same for any profile of the
 machine, cards included (:ref:`insert-profile`).
