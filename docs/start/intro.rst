@@ -21,6 +21,7 @@ installation experience.
    etching
    boot
    menu
+   credits
    licensing
    compat
    updates

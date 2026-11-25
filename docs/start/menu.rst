@@ -54,6 +54,13 @@ Key features of the game list screen:
   - Hard disk usage and available space
   - Current system time
 
+- **Network footer:** the line with the IP address (``IP addr``) is drawn on
+  **every** screen of the menu (disclaimer, info screens, popups, even the
+  early start-up screens). When the machine has no address it says *not
+  connected*. The address is the one to type in a phone or a browser to reach
+  the :ref:`Profile manager <online_web_section>` (see also the F8 QR code in
+  the games).
+
 Navigation Controls
 ^^^^^^^^^^^^^^^^^^^
 
@@ -101,6 +108,15 @@ Menu changes in 2.0.0
 - The menu is **animated**.
 - An **About** screen was added.
 - Holding **TEST** no longer breaks the menu.
+- The menu and the games share one pool of credits (see
+  :ref:`credits_section`).
+- The menu remembers the last **region** of each game that has several, and
+  Prex 3 and Premiere 3 offer an **MK3 version** and an **MK5 version**.
+- **System Information** now shows the network (address, mask, gateway, DNS),
+  the result of the last disk check and the operator key of the web settings
+  page.
+- The menu is translated into Spanish, Portuguese, Korean, Chinese and
+  Japanese (see **Menu Language** in the Settings menu below).
 - A game left by holding **TEST** no longer lands in the Settings menu while
   the button is still down.
 - The Settings menu can be used with the **TEST**, **SERVICE** and **CLEAR**
@@ -195,7 +211,11 @@ Below is a detailed explanation of each settings option:
   messages are translated; when a piece of text has not been translated yet
   (for example the description of each game), it is shown in English. The Profile manager opens in the same
   language the menu is set to; each phone or browser can still switch to another
-  language for itself (see :ref:`online_web_section`).
+  language for itself (see :ref:`online_web_section`). The language list itself
+  (its help lines at the bottom) and the labels of **System Information** are
+  translated too. The names of the games and their descriptions stay as they
+  are. The Latin accented letters (á, é, ñ, ç, ã, ...) are drawn with the
+  menu's own font, so Spanish and Portuguese read normally.
 
 - **Operating System Swap**
 
@@ -261,6 +281,29 @@ Below is a detailed explanation of each settings option:
   - The machine always starts normally afterwards, even if errors were found.
     The result is written to ``fsck.log`` on the SETTINGS partition, and its
     summary is shown in **System Information** (*Disk Check*).
+
+- **System Information**
+
+  A screen with the details of the machine (any red button goes back). Besides
+  the motherboard, CPU, RAM, video, hard disk model and serial number,
+  storage use and operating system, it shows:
+
+  - **Disk Check**: the summary of the last *Check File Systems* run.
+  - **Operator Key (web settings)**: the key that unlocks everything that
+    changes the machine from the web (the :ref:`Settings page
+    <online_settings_page_section>`, putting a profile into the running game,
+    the pads page, the USB ports page, the PMod songs page). **Each machine
+    makes its own random key** the first time it starts, and you can change it
+    from the Settings page. Do not publish a photo of this screen.
+  - **IP Address, Subnet Mask, Gateway, DNS 1 and DNS 2**: the network values
+    the machine is using, as the network block of the original Phoenix and XX
+    shows them. An empty value means the machine does not have it (for example
+    no cable).
+
+- **About**
+
+  A full-screen credits page with the logo of the *Imperfect Collection* and
+  the people and projects behind it. Any red button goes back to the settings.
 
 - **Restart/PowerOff**
 

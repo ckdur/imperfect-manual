@@ -1,2 +1,22 @@
 Premiere 3
 ~~~~~~~~~~
+
+MK3 and MK5 versions
+--------------------
+
+Like Prex 3 (see :doc:`850`), Premiere 3 has two versions, chosen with the
+menu's region selector: **MK3 version** (the default, the original executable)
+and **MK5 version** (a source port of the MK5 release, run through SDL2). The
+menu remembers the last one used. The MK5 version keeps its own saves, separate
+from the MK3 ones, and uses the same disc data as the MK3 version. If the
+package has no MK5 executable, choosing **MK5 version** starts the MK3 version.
+
+Both MK5 ports (Premiere 3 and Prex 3) take part in the loader's services like
+the other games: the shared credits (:ref:`credits_section`), the live pages
+(now playing and scores, :ref:`online_streaming_section`), autoplay from the
+live page, and free play with the attract sequence.
+
+.. note::
+
+   The MK5 ports were tested in the virtual machine only; they have not been
+   tried on a real cabinet yet.

@@ -24,9 +24,13 @@ them:
   (first start, an invalid settings file, or DEFAULT SETTING in the game's
   test menu): a machine that already has settings for a game keeps its value.
   To change it there, set DEMO SOUND to ON in that game's test menu.
-- **MK3 and MK5 versions of Prex 3.** The region selector of Prex 3 offers
-  **MK3 version** (default) and **MK5 version** (source port); see
-  :doc:`850`. The Premiere 3 MK5 port is not available yet.
+- **MK3 and MK5 versions of Prex 3 and Premiere 3.** The region selector of
+  both games offers **MK3 version** (default) and **MK5 version** (source
+  port); see :doc:`850` and :doc:`800`.
+- **Credits.** The menu and the games share one pool of credits, and old games
+  in free play show their attract sequence: see :ref:`credits_section`.
+- **Autoplay.** The live pages can switch autoplay on in most games: see
+  :ref:`online_streaming_section`.
 
 .. toctree::
    :maxdepth: 2

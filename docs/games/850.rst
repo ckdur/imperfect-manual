@@ -12,3 +12,8 @@ made at launch time and the menu remembers the last one used. The MK5 version
 keeps its own saves (``/SAVE/850/mk5``), separate from the MK3 ones. The
 disc is the same one the MK3 version uses. If a package has no MK5
 executable, choosing **MK5 version** starts the MK3 version.
+
+The MK5 version takes part in the loader's services like the other games: the
+shared credits (:ref:`credits_section`; it counts up to 99 credits), the live
+pages and autoplay (:ref:`online_streaming_section`). It has not been tried on
+a real cabinet yet. Premiere 3 has the same two versions, see :doc:`800`.

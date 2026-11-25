@@ -141,7 +141,8 @@ The updates are organized in the following way:
     PMOD itself moved to **PMOD6**.
   - Executables are now checked against a signature before they are loaded.
 
-- **1.3.1 - 2.0.0** - *file name and date are published with the release in
+- **1.3.1 - 2.0.0** - the user-facing list is in :ref:`changelog_section`.
+  *file name and date are published with the release in
   the Updates folder.* A new base system; the changes are:
 
   - **New base OS ("NTDECOS")**: own kernel, initramfs and userland, built

@@ -33,6 +33,7 @@ file. The licensing of this documentation is under Creative Commons Attribute
    :maxdepth: 2
    :caption: Contents:
 
+   changelog
    start/intro
    online/intro
    importer/intro

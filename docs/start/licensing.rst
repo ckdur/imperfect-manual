@@ -14,7 +14,9 @@ ensure:
 
 - Each copy of Imperfect Collection remains **unique and traceable**.
 - **Game transference** between separate copies is prevented, avoiding
-  unauthorized distribution of game files.
+  unauthorized distribution of game files. The only exception is the
+  :doc:`transfer between two paid 2.0.0 disks <../importer/imperfect>`
+  (experimental).
 
 - The loader continues serving its archival purpose **without enabling piracy**.
 
