@@ -143,11 +143,15 @@ Settings of the :ref:`Profile manager <online_web_section>`.
        games up to NX (:ref:`online_side_names_section`).
    * - ``operator_key``
      - empty
-     - The key the :ref:`USB ports page <online_usb_ports_section>` asks
-       for before it changes ``[usb] p1=`` / ``p2=``. Empty: anybody who
-       can open the page may change them. The
-       :ref:`PMod songs page <online_web_pmod_section>` needs it for every
-       change; empty, that page only lists the songs.
+     - **Deprecated.** There is now one operator key for everything,
+       ``[stream] press_key`` (the :ref:`settings page <online_settings_page_section>`,
+       the :ref:`USB ports page <online_usb_ports_section>`, the
+       :ref:`PMod songs page <online_web_pmod_section>`, the license page and
+       the pads page). If you had set this line, the machine takes its value
+       as the single key the first time it starts, unless ``press_key`` was
+       already chosen by hand (then ``press_key`` wins and this line is
+       ignored). It is kept for one more release and never written again;
+       delete it once the key works.
    * - ``pmod_upload_mb``
      - ``1024``
      - Largest upload (MB) of the :ref:`PMod songs page <online_web_pmod_section>`.

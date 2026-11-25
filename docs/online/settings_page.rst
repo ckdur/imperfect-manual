@@ -11,7 +11,14 @@ never locks the operator out.
 Anyone on the network can **read** the settings. **Changing** them needs the
 **operator key**: at the cabinet, open the menu's settings and choose
 **System Information**; the key is the "Operator Key" line. Each machine makes
-its own random key the first time it starts.
+its own random key the first time it starts. It is the **only** operator key:
+the same one opens this page, the pads page, the **USB ports** page, the **PMod
+songs** page and the license page when it replaces a valid license. The old
+``[web] operator_key=`` line is deprecated: a machine that had it keeps that
+value as its key (it is copied to ``press_key``), and if both were set,
+``press_key`` wins. Each of these pages asks for the key and keeps it only in
+the open tab; closing the tab forgets it. The USB ports page still lists the
+sticks without a key, but changing a port needs it.
 
 Settings are in two groups:
 
@@ -27,7 +34,9 @@ Settings are in two groups:
 Each setting says when it applies: **at once**, **at the next game start** or
 **after the next restart**. The last 10 changes are listed at the bottom of the
 page (the file is ``/SETTINGS/settings_changes.log``: time, address of the
-device, setting, old and new value; keys are never written to it).
+device, setting, old and new value; keys are never written to it). Until you
+unlock the page with the key, the list shows the time, the setting and the old
+and new value, but not the address of the device that made the change.
 
 .. _insert-profile:
 
@@ -66,7 +75,8 @@ Changing the operator key
 
 On the same page, under *Change the operator key*: 8 to 64 characters, no
 spaces, no ``;`` and no ``#``. The new key works at once, also for the pads
-page and the autoplay switch.
+page, the autoplay switch, the USB ports page, the PMod songs page and the
+license page.
 
 If you lose the key
 -------------------
@@ -80,7 +90,9 @@ Wrong keys
 
 After a wrong key the device has to wait a moment; after five wrong keys in a
 row it is locked out for a minute, and longer each time (up to 15 minutes).
-The same protection covers the pads page and the autoplay switch.
+The same protection covers the pads page, the autoplay switch, the USB ports
+page, the PMod songs page and the license page: wrong keys on one of them
+count for all.
 
 What is not protected
 ---------------------
