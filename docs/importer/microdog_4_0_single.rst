@@ -90,6 +90,34 @@ Follow these steps to perform an import using the Microdog 4.0 regular-based Imp
 
    - The newly imported game should appear in the game menu after reboot.
 
+Key checks (since 2.0.0, November 2026)
+---------------------------------------
+
+Every movie of these four games (``BGA/*.MOV``) holds a dongle question. The game
+uses the dongle's answer to decrypt the movie's own name, and only plays the movie
+when that name matches the file name. A wrong answer in the key file therefore
+makes the movie fail to open, and the NX2 China build then crashes (seen at the
+end of a credit, on the ``CONGRATULATIONS`` movie). The importer now makes sure no
+such answer is installed:
+
+- **Every answer is read at least twice.** When the dongle gives different answers
+  for the same question, the importer asks up to 7 times and keeps the answer
+  given most often. The log shows ``Dongle answers ... disagreed`` when that
+  happened.
+- **Every movie answer is checked against the movie.** An answer that does not
+  decrypt the movie's name is not used; the importer asks the dongle again (log:
+  ``Dongle answer ... does not open ...``). When no answer works, the import stops
+  with a message instead of writing a bad key file.
+- **The finished key file is checked before the game is installed**, whether it
+  was read from your dongle or is the key file shipped with the system (used for
+  the China builds when their own dongle is not connected). If any movie cannot
+  be opened with it, the game is not installed: the message says how many movies
+  failed and the log lists them. With good keys the log says
+  ``Key file opens all N movies``.
+
+These checks only apply to NX2, NX2 China, NXA and NXA China. Fiesta and later
+games keep their data in their own file system and are not affected.
+
 Additional Notes
 ----------------
 
@@ -121,6 +149,18 @@ Troubleshooting
 
   - Re-etch the image to eliminate potential corruption.
   - Check logs for file permission or mounting errors.
+
+- **"The dongle gives no answer that opens ..." or "The dongle answers for ...
+  never agreed":**
+
+  - The dongle gave unreliable answers. Reseat it (another USB port if possible)
+    and import again.
+
+- **"The key file ... does not open N of M movies of this game":**
+
+  - With your own dongle connected: reseat it and import again.
+  - Without the dongle (China builds using the shipped key file): the shipped key
+    file does not match your game data. Report it with the importer log.
 
 - **Game not appearing after reboot:**
 

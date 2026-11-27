@@ -85,6 +85,14 @@ Cabinet tools and the importer
   :doc:`importer/imperfect`): both licenses must be paid.
 - Imported games whose key files were wrong (see the NX2 note above) are fixed
   for new imports.
+- **Checked key files for NX2, NX2 China, NXA and NXA China**: every dongle
+  answer is read at least twice, every movie answer must open its movie, and the
+  finished key file (from the dongle or shipped) must open every movie of the
+  game before it is installed (:doc:`importer/microdog_4_0_single`). This fixes
+  the **NX2 China crash at the end of a credit** (a wrong answer for its
+  CONGRATULATIONS movie) and two movies of **NXA China** that had no answer at
+  all. A machine with NX2 China or NXA China already installed should import it
+  again with this version.
 
 Security and licensing
 ----------------------
