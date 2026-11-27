@@ -53,9 +53,9 @@ The ``[profile]`` section
    * - Key
      - Meaning
    * - ``name``
-     - Your name in every game. Letters ``A-Z`` and digits; up to 12
-       characters. Only Phoenix uses all 12: NX2 and NX Absolute use the
-       first 8, the other games the first 11.
+     - Your name in every game. Letters ``A-Z`` and digits; **up to 8
+       characters** (a longer name is cut to 8). Infinity can show up to 16:
+       give it its own longer name in ``[infinity]``.
 
 The game sections
 -----------------
@@ -120,7 +120,7 @@ games; a number outside the game's range also becomes 0 there.
    * - ``[infinity]``
      - Infinity
      - ``name``
-     - only the name (up to 12 characters); Infinity has no avatar here
+     - only the name (up to 16 characters); Infinity has no avatar here
    * - any of them
      -
      - ``name``

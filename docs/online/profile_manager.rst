@@ -182,8 +182,8 @@ Names
 -----
 
 On Fiesta, Fiesta EX and Fiesta 2 the name is **4 to 8 letters or digits and
-begins with a letter**. NX2 and NX Absolute names have up to 12 characters.
-The other games follow ``profile.ini`` (up to 12 characters).
+begins with a letter**. Every other game also takes at most **8 characters**
+(``profile.ini``); only Infinity takes up to 16.
 
 When your changes take effect
 -----------------------------
