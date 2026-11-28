@@ -16,6 +16,21 @@ practical compatibility depends on several critical factors:
    just enough performance for most games, especially on MK9-based systems.
    **AMD** processors work just as well.
 
+   The Imperfect Collection 2.0.0 also **requires a processor with PAE**
+   (Physical Address Extension), which lets the system use more than 4 GB of
+   RAM:
+
+   - **Every 64-bit Intel or AMD processor has PAE.** That includes the
+     Pentium Dual-Core E300 above and anything of its kind or newer. If your
+     processor is 64-bit, there is nothing to check.
+   - **Some old 32-bit-only processors do not have it**, for example the first
+     Pentium M and Celeron M laptop processors, the VIA C3 and the AMD Geode
+     LX. (Many other 32-bit processors do have it.) On Linux, a processor with
+     PAE lists ``pae`` in ``/proc/cpuinfo``.
+
+   Without PAE the machine does not start: expect it to restart over and over
+   without any message.
+
 2. **Sound Card**
 
    ALSA must detect the sound device as **hw:0,0**. Modern motherboards may have
@@ -51,6 +66,45 @@ practical compatibility depends on several critical factors:
 
    The GPU is the most critical component due to driver support. Compatibility
    varies depending on the operating system:
+
+.. _displays_section:
+
+Screens and graphics cards
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Imperfect Collection 2.0.0 shows its picture through **one graphics card
+at a time**.
+
+- **Several screens on the same card** (HDMI, DVI, DisplayPort, VGA, ...):
+  the connected screens are **mirrored**, all showing the same picture. This is
+  the supported way to use more than one screen. Plug every screen into the
+  ports of that one card.
+- **Screens on different graphics cards are not supported.** The picture is not
+  copied from one card to another, so screens on the second card show nothing
+  from the machine. No support for this is planned.
+
+If the computer has more than one graphics card, one is picked in this order:
+an NVIDIA card covered by the bundled NVIDIA drivers, then AMD, then Intel. An
+NVIDIA card that those drivers do not cover is used only when there is no AMD
+or Intel graphics.
+
+.. note::
+
+   Many laptops, and some desktop boards, wire their ports to different
+   graphics cards. For example, the built-in screen may belong to the Intel
+   graphics and the HDMI port to the NVIDIA card. Only the ports of the card
+   in use give a picture. If a screen stays black, try another port, or turn
+   off the graphics you do not use in the BIOS where it allows that.
+
+For the best result with several screens:
+
+- Connect them before turning the machine on. A screen connected while a game
+  is running may stay black until you are back in the menu.
+- Use screens that share a resolution. If they have none in common, a smaller
+  screen may show only part of the picture.
+
+Several screens on one card have so far been tested only in a virtual machine,
+not with real hardware.
 
 Compatible GPUs for OS
 ^^^^^^^^^^^^^^^^^^^^^^
