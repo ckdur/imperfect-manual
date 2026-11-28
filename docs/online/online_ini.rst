@@ -24,7 +24,7 @@ yours from then on. Changes are picked up the next time a game starts.
 
    [web]
    enabled=1
-   port=8080
+   port=80
    qr_key=F8
    qr_seconds=10
    qr_side=right
@@ -109,7 +109,7 @@ Settings of the :ref:`Profile manager <online_web_section>`.
      - ``1``
      - ``0`` does not start the page.
    * - ``port``
-     - ``8080``
+     - ``80``
      - The port of the page.
    * - ``qr_key``
      - ``F8``

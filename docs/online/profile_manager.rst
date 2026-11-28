@@ -256,7 +256,7 @@ normal size and covers the right edge of the game picture while it is shown.
 PMod songs
 ----------
 
-The **PMod songs** page (``http://<cabinet>:8080/pmod/``, the *PMod songs*
+The **PMod songs** page (``http://<cabinet>/pmod/``, the *PMod songs*
 button of the home page) manages the songs you added to PMod, like the
 :doc:`USB importer <../importer/pmod>` but from a phone or a computer on the
 cabinet's network. It shows **names only**: no banners, no previews, no

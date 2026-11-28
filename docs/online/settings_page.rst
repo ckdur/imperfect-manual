@@ -3,7 +3,7 @@
 Settings page
 ~~~~~~~~~~~~~
 
-**Where:** ``http://<cabinet>:8080/settings/`` (the **Settings** link in the
+**Where:** ``http://<cabinet>/settings/`` (the **Settings** link in the
 header of every page; the address of the cabinet is the one of the F8 QR code).
 It also opens when the machine has no valid license, so a licensing problem
 never locks the operator out.
